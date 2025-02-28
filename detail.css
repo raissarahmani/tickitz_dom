@@ -176,6 +176,7 @@ main {
     font: 600 15px 'Mulish';
     background-color: #EFF0F6;
     width: 100%;
+    cursor: pointer;
 }
 
 .book :nth-child(2) div button {
@@ -188,6 +189,7 @@ main {
     position: absolute;
     bottom: 0;
     right: 0;
+    cursor: pointer;
 }
 
 .cinema>:first-child {
@@ -221,6 +223,7 @@ main {
     padding: 5vh 3vw;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .cinema>:nth-child(2) div img {
@@ -248,6 +251,7 @@ main {
     margin: 0 0.5vw;
     padding: 5px 10px;
     text-align: center;
+    cursor: pointer;
 }
 
 .pages div:hover {
@@ -269,6 +273,7 @@ main {
     font: 400 14px 'Mulish';
     margin: 7vh 0;
     padding: 3vh 5vw;
+    cursor: pointer;
 }
 
 footer {
