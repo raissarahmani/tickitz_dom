@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./img/avenger.png);
+    background-position: 50% 40%;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin: 10vh 10vw 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    object-fit: cover;
+    width: 50%;
+    height: 50%;
+}
+
+.signup {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 5vh 3vw;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-step div {
+    background-color: #1D4ED8;
+    border-radius: 47px;
+    color: #fff;
+    margin: 5vh 4vw 1vh;
+    padding: 1.3vh 1vw;
+    position: relative;
+    font: 500 16px 'Mulish'
+}
+
+.second-step div, .third-step div {
+    background-color: #A0A3BD;
+    border-radius: 47px;
+    color: #fff;
+    margin: 5vh 4vw 1vh;
+    padding: 1.3vh 1vw;
+    position: relative;
+    font: 500 16px 'Mulish'
+}
+
+.second-step div::before, .third-step div::before {
+    content:"";
+    position: absolute;
+    right:100%;
+    top: 50%;
+    width:14vw;
+    height:1vh;
+    border-top: 1px dashed #A0A3BD;
+}
+
+.first-step p {
+    display: flex;
+    justify-content: center;
+    margin: 0 2 vw;
+    font: 600 14px 'Mulish';
+    color: #4E4B66;
+}
+
+.second-step p, .third-step p {
+    display: flex;
+    justify-content: center;
+    margin: 0 2 vw;
+    font: 600 14px 'Mulish';
+    color: #A0A3BD;
+}
+
+form {
+    margin: 5vh 0 1vh 0;
+    padding: 3vh 3vw 1vh 3vw;
+    font: 600 16px 'Mulish';
+    color: #4E4B66;
+    position: relative;
+}
+
+.signup>form>input {
+    margin: 2vh 0;
+    padding: 3vh 1vw;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
+    background-color: #FCFDFE;
+    width: 100%;
+}
+
+::placeholder {
+    font: 400 16px 'Mulish';
+    color: #A0A3BD;
+}
+
+form div {
+    display: flex;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
+    background-color: #FCFDFE;
+    margin: 2vh 0;
+    padding-right: 1vw;;
+}
+
+form div img {
+    cursor: pointer;
+}
+
+form input {
+    padding: 3vh 1vw;
+    border: none;
+    border-radius: 4px;
+    background-color: #FCFDFE;
+    width: 100%;
+}
+
+form input:focus {
+    outline: none;
+}
+
+#tnc {
+    width: 5%;
+    margin: 0;
+    padding: 0;
+    color: #696F79; 
+    font: 400 18px 'Mulish';
+    margin-top: 3vh;
+}
+
+form button {
+    background-color: #1D4ED8;
+    color:#F7F7FC;
+    font: 700 16px 'Mulish';
+    margin: 5vh 0;
+    padding: 3vh 4vw;
+    border-radius: 4px;
+    border: 1px solid #1D4ED8;
+    width: 100%;
+    cursor: pointer;
+}
+
+.acc {
+    font: 500 16px 'Inter';
+    color: #696F79;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.or {
+    display: flex;
+    align-items: center;
+    padding: 0 3vw;
+}
+
+.or div {
+    flex: 1;
+    border-bottom: 0.5px solid #DEDEDE;
+}
+
+.or p {
+    font: 400 12px 'Inter';
+    color: #aaa;
+    margin: 0 2vw;
+}
+
+.socmed {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 3vh 0;
+    padding: 3vh 0;
+}
+
+.socmed div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 2vh 1vw;
+    font: 600 18px 'Mulish';
+    color: #A0A3BD;
+    border-radius: 4px;
+    box-shadow: 1px 4px 10px lightgray;
+    cursor: pointer;
+}
+
+.socmed div img, .socmed div p {
+    padding: 0 1vw;
+}
