@@ -1,0 +1,351 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5vh 10vw;
+    border-bottom: 1px solid #DEDEDE;
+    background-color: #fff;
+}
+
+.logo {
+    width: 15%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font: 400 14px 'Mulish';
+    color: #0F172A;
+    width: 60%;
+}
+
+.buttons {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.buttons button {
+   font: 400 14px 'Mulish';
+   border: 1px solid #1D4ED8;
+   border-radius: 5px;
+   margin: 0 0.5vw;
+   padding: 2vh 1.5vw;
+   cursor: pointer;
+}
+
+.buttons :first-child {
+    color: #1D4ED8;
+    background-color: #fff;
+}
+
+.buttons :nth-child(2) {
+    color: #F8FAFC;
+    background-color: #1D4ED8;
+}
+
+main {
+    position: relative;
+}
+
+.pic {
+    background-image: url(./img/poster8.jpeg);
+    background-position: 50% 17%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 60vh;
+}
+
+.poster {
+    height: 25%;
+    border-radius: 6px;
+    position: absolute;
+    top: 15%;
+    left: 10vw;
+}
+
+.poster img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.desc {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+}
+
+.desc>p {
+    font: 700 32px 'Mulish';
+    color: #14142B;
+}
+
+.desc>:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+}
+
+.desc :nth-child(2) div {
+    font: 400 16px 'Mulish';
+    color: #A0A3BD;
+    border: 1px solid rgba(160, 163, 189, 0.1);
+    border-radius: 20px;
+    margin: 2vh 0.5vw 2vh 0;
+    padding: 1vh 1vw;
+    background-color: rgba(160, 163, 189, 0.1);
+}
+
+.detail {
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 20vw 30vw;
+    grid-template-rows: repeat(2,10vh);
+}
+
+.detail1 :first-child, .detail2 :first-child,
+.detail3 :first-child, .detail4 :first-child {
+    font: 400 14px 'Mulish';
+    color: #8692A6;
+}
+
+.detail1 :nth-child(2), .detail2 :nth-child(2),
+.detail3 :nth-child(2), .detail4 :nth-child(2) {
+    font: 400 16px 'Mulish';
+    color: #121212;
+}
+
+.synopsis {
+    padding: 50vh 10vw 0 10vw;
+}
+
+.synopsis :first-child {
+    font: 600 20px 'Mulish';
+    color: #000;
+    padding-top: 5vh;
+}
+
+.synopsis>:nth-child(2) {
+    font: 400 16px 'Mulish';
+    color:#A0A3BD;
+    line-height: 32px;
+    margin: 2vh 0;
+}
+
+.book {
+    padding: 5vh 10vw 10vh 10vw;
+}
+
+.book p {
+    font: 400 32px 'Mulish';
+    color: #121212;
+}
+
+.book>:nth-child(2) {
+    font: 600 20px 'Mulish';
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: 5vh 0;
+}
+
+.book>:nth-child(2) div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1vw;
+    width: 25%;
+    position: relative;
+}
+
+.book>:nth-child(2) div input,
+.book>:nth-child(2) div select {
+    margin: 4vh 1vw 0 0;
+    padding: 2vh 2vw;
+    border: 1px solid #efd0f6;
+    border-radius: 6px;
+    font: 600 15px 'Mulish';
+    background-color: #EFF0F6;
+    width: 100%;
+}
+
+.book :nth-child(2) div button {
+    padding: 2.5vh 2vw;
+    background-color: #1D4ED8;
+    border: 1px solid #1D4ED8;
+    border-radius: 5px;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.cinema>:first-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cinema>:first-child>:first-child {
+    font: 600 20px 'Mulish';
+    color: #000;
+    margin-right: 3vw;
+}
+
+.cinema>:first-child>:nth-child(2) {
+    font: 700 18px 'Mulish';
+    color: #8692A6;
+}
+
+.cinema>:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5vh 0;
+}
+
+.cinema>:nth-child(2) div {
+    border: 2px solid #DEDEDE;
+    border-radius: 8px;
+    padding: 5vh 3vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinema>:nth-child(2) div img {
+    object-fit: contain;
+    width: 12vw;
+    height: 5vh;
+}
+
+.cinema :nth-child(2) div:hover {
+    background-color: #1D4ED8;
+}
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.pages div {
+    border: 0.5px solid #DEDEDE;
+    border-radius: 8px;
+    font: 400 18px 'Mulish';
+    color: #4E4B66;
+    margin: 0 0.5vw;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.pages div:hover {
+    background-color: #1D4ED8;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(29,78,216,0.3);
+}
+
+.cinema>:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+.cinema button {
+    background-color: #1D4ED8;
+    border: 1px solid #1D4ED8;
+    border-radius: 5px;
+    color: #F8FAFC;
+    font: 400 14px 'Mulish';
+    margin: 7vh 0;
+    padding: 3vh 5vw;
+}
+
+footer {
+    padding: 10vh 10vw;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vh;
+}
+
+.aboutus {
+    width: 40%;
+}
+
+.aboutus p {
+    font: 400 16px 'Mulish';
+    color: #6E7191;
+    margin: 2vh 0;
+    padding: 0 1vw;
+    line-height: 32px;
+}
+
+.explore {
+    width: 15%;
+    padding: 1vw;
+}
+
+.explore :first-child, .sponsor :first-child, .contact-us :first-child {
+    font: 700 16px 'Mulish';
+    color: #000;
+    margin-bottom: 5vh;
+}
+
+.explore p {
+    font: 400 14px 'Mulish';
+    color:#4E4B66;
+    margin: 3vh 0;
+}
+
+.sponsor {
+    width: 25%;
+    padding: 1vw;
+}
+
+.sponsor img {
+    margin: 2vh 0;
+}
+
+.contact-us {
+    width: 20%;
+    padding: 1vw;
+}
+
+.socmed {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'a b';
+}
+
+.socmed img {
+    grid-area: a;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.socmed p {
+    grid-area: b;
+    font: 600 14px 'Mulish';
+    color: #6E7191;
+}
+
+.copyright {
+    font: 400 14px 'Mulish';
+    color: #4E4B66;
+    text-align: center;
+}
