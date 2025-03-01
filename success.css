@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5vh 10vw;
+    border-bottom: 1px solid #DEDEDE;
+    background-color: #fff;
+}
+
+.logo {
+    width: 15%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font: 400 14px 'Mulish';
+    color: #0F172A;
+    width: 60%;
+}
+
+.buttons {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.buttons button {
+   font: 400 14px 'Mulish';
+   border: 1px solid #1D4ED8;
+   border-radius: 5px;
+   margin: 0 0.5vw;
+   padding: 2vh 1.5vw;
+   cursor: pointer;
+}
+
+.buttons :first-child {
+    color: #1D4ED8;
+    background-color: #fff;
+}
+
+.buttons :nth-child(2) {
+    color: #F8FAFC;
+    background-color: #1D4ED8;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.success {
+    padding: 20vh 5vw 20vh 10vw;
+    width: 60%;
+    background: url(./img/avenger.png);
+    background-size: cover;
+    z-index: 0;
+}
+
+.success::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: -1;
+    width: 60%;
+}
+
+.success>:first-child {
+    padding: 5vh 0;
+}
+
+.success>:first-child img {
+    object-fit: contain;
+    width: 70%;
+    height: 50%;
+}
+
+.success>:nth-child(2) {
+    font: 700 48px 'Mulish';
+    color: #fff;
+}
+
+.success>:nth-child(3) {
+    font: 400 24px 'Mulish';
+    color: #fff;
+    margin: 5vh 0;
+}
+
+.success>:last-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.success>:last-child p {
+    font: 700 18px 'Mulish';
+    color: #fff;
+    margin-right: 2vw;
+}
+
+.ticket {
+    width: 40%;
+    background: rgba(160, 163, 189, 0.2);
+    padding: 10vh 10vw;
+}
+
+.ticket>:first-child {
+    background-color: #fff;
+    padding: 5vh 3vw;
+}
+
+.ticket>:first-child>:first-child {
+    padding-bottom: 3vh;
+    border-bottom: 1px dashed rgba(222,222,222,1);
+}
+
+.ticket>:first-child>:first-child img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%
+}
+
+.ticket>:first-child>:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    'a b'
+    'c d'
+    'e f'
+    'g g';
+    padding-top: 5vh;
+}
+
+.summary>:first-child {
+    grid-area: a;
+}
+
+.summary>:nth-child(2) {
+    grid-area: b;
+}
+
+.summary>:nth-child(3) {
+    grid-area: c;
+}
+
+.summary>:nth-child(4) {
+    grid-area: d;
+}
+
+.summary>:nth-child(5) {
+    grid-area: e;
+}
+
+.summary>:nth-child(6) {
+    grid-area: f;
+}
+
+.total {
+    grid-area: g;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.total>:nth-child(2) {
+    text-align: right;
+}
+
+.summary div>:first-child {
+    font: 600 12px 'Mulish';
+    color: #AAAAAA;
+}
+
+.summary div>:nth-child(2) {
+    font: 600 14px 'Mulish';
+    color: #14142B;
+    margin: 1vh 0 2vh 0;
+}
+
+.ticket-button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 7vh 0;
+}
+
+.ticket-button button {
+    font: 400 14px 'Mulish';
+    border: 1px solid #1D4ED8;
+    border-radius: 5px;
+    padding: 2vh 1.5vw;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+ }
+
+ .ticket-button button img {
+    width: 10%;
+    height: 10%;
+    margin-right: 1vw;
+ }
+ 
+ .ticket-button>:first-child {
+    color: #1D4ED8;
+    background-color: #fff;
+ }
+ 
+ .ticket-button>:nth-child(2) {
+    color: #F8FAFC;
+    background-color: #1D4ED8;
+ }
+
+footer {
+    padding: 10vh 10vw;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vh;
+}
+
+.aboutus {
+    width: 40%;
+}
+
+.aboutus p {
+    font: 400 16px 'Mulish';
+    color: #6E7191;
+    margin: 2vh 0;
+    padding: 0 1vw;
+    line-height: 32px;
+}
+
+.explore {
+    width: 15%;
+    padding: 1vw;
+}
+
+.explore :first-child, .sponsor :first-child, .contact-us :first-child {
+    font: 700 16px 'Mulish';
+    color: #000;
+    margin-bottom: 5vh;
+}
+
+.explore p {
+    font: 400 14px 'Mulish';
+    color:#4E4B66;
+    margin: 3vh 0;
+}
+
+.sponsor {
+    width: 25%;
+    padding: 1vw;
+}
+
+.sponsor img {
+    margin: 2vh 0;
+}
+
+.contact-us {
+    width: 20%;
+    padding: 1vw;
+}
+
+.socmed {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'a b';
+}
+
+.socmed img {
+    grid-area: a;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.socmed p {
+    grid-area: b;
+    font: 600 14px 'Mulish';
+    color: #6E7191;
+}
+
+.copyright {
+    font: 400 14px 'Mulish';
+    color: #4E4B66;
+    text-align: center;
+}
