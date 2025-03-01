@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment2.css">
+    <title>Tickitz - Payment</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/tickitz2.png" alt="Logo Tickitz">
+        </div>
+        <nav>
+            <p>Home</p>
+            <p>Movie</p>
+            <p>Buy Ticket</p>
+        </nav>
+        <div class="buttons">
+            <button>Sign In</button>
+            <button>Sign Up</button>
+        </div>
+    </header>
+    <main>
+        <section class="steps">
+            <div class="first-step">
+                <div><img src="./img/ic_round-done.png" alt="Done"></div>
+                <p>Dates and Time</p>
+            </div>
+            <div class="second-step">
+                <div><img src="./img/ic_round-done.png" alt="Done"></div>
+                <p>Seat</p>
+            </div>
+            <div class="third-step">
+                <div>3</div>
+                <p>Payment</p>
+            </div>
+        </section>
+        <section class="payment-page">
+            <div class="info">
+                <p>Payment Info</p>
+                <form>
+                    <label for="date">DATE & TIME</label> <br>
+                    <input type="text" name="date" value="Tuesday, 07 July 2020 at 02:00pm" readonly> <br><br>
+                    <label for="title">MOVIE TITLE</label> <br>
+                    <input type="text" name="title" value="Spider-Man:Homecoming" readonly> <br><br>
+                    <label for="cinema">CINEMA NAME</label> <br>
+                    <input type="text" name="cinema" value="CineOne21 Cinema" readonly> <br><br>
+                    <label for="qty">NUMBER OF TICKETS</label> <br>
+                    <input type="text" name="qty" value="3 pieces" readonly> <br><br>
+                    <label for="total">TOTAL PAYMENT</label> <br>
+                    <input type="text" name="total" value="$30.00" readonly> <br><br>
+                </form>
+            </div>
+            <div class="personal-info">
+                <p>Personal Information</p>
+                <form>
+                    <label for="name">Full Name</label> <br>
+                    <input type="text" name="name" value="Jonas El Rodriguez"> <br><br>
+                    <label for="email">Email</label> <br>
+                    <input type="email" name="email" value="jonasrodri123@gmail.com"> <br><br>
+                    <label for="phone">Phone Number</label> <br>
+                    <div>
+                        <p>+62</p>
+                        <input type="text" name="phone"> <br><br>
+                    </div>
+                </form>
+            </div>
+            <div class="method">
+                <p>Payment Method</p>
+                <div>
+                    <div><img src="./img/google-pay.png" alt="Google Pay"></div>
+                    <div><img src="./img/visa.png" alt="Visa"></div>
+                    <div><img src="./img/gopay.png" alt="Gopay"></div>
+                    <div><img src="./img/paypal.png" alt="Paypal"></div>
+                    <div><img src="./img/dana.png" alt="Dana"></div>
+                    <div><img src="./img/bca.png" alt="BCA"></div>
+                    <div><img src="./img/bri.png" alt="BRI"></div>
+                    <div><img src="./img/ovo.png" alt="Ovo"></div>
+                </div>
+                <button>Pay your order</button>
+            </div>
+        </section>
+        <section class="popup">
+            <p>Payment Info</p>
+            <div>
+                <p>No. Rekening Virtual :</p>
+                <div>
+                    <p>12321328913829724</p>
+                    <button>Copy</button>
+                </div>
+            </div>
+            <div>
+                <p>Total Payment :</p>
+                <p>$30</p>
+            </div>
+            <p>Pay this payment bill before it is due, <span>on June 23, 2023.</span> If the bill has not been paid by the specified time, it will be forfeited</p>
+            <div>
+                <button>Check Payment</button>
+                <button>Pay Later</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="aboutus">
+                <img src="./img/Tickitz2.png" alt="Logo Tickitz">
+                <p>Stop waiting in line. Buy tickets conveniently, watch movies quietly.</p>
+            </div>
+            <div class="explore">
+                <div>Explore</div>
+                <p>Cinema</p>
+                <p>Movies List</p>
+                <p>My Ticket</p>
+                <p>Notification</p>
+            </div>
+            <div class="sponsor">
+                <div>Our Sponsor</div>
+                <img src="./img/ebv.svg" alt="ebv">
+                <img src="./img/cineone.svg" alt="cineone21">
+                <img src="./img/hiflix.png" alt="hiflix">
+            </div>
+            <div class="contact-us">
+                <div>Follow Us</div>
+                <div class="socmed">
+                    <img src="./img/Facebook2.svg" alt="Facebook">
+                    <p>Tickitz Cinema id</p>
+                </div>
+                <div class="socmed">
+                    <img src="./img/instagram.svg" alt="instagram">
+                    <p>tickitz.id</p>
+                </div>
+                <div class="socmed">
+                    <img src="./img/x.svg" alt="Twitter">
+                    <p>tickitz.id</p>
+                </div>
+                <div class="socmed">
+                    <img src="./img/youtube.svg" alt="Youtube">
+                    <p>Tickitz Cinema id</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">© 2020 Tickitz. All Rights Reserved.</div>
+    </footer>
+</body>
+</html>
