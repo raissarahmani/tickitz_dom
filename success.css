@@ -17,6 +17,11 @@ header {
     width: 15%;
 }
 
+.logo img {
+    object-fit: contain;
+    width: 70%;
+}
+
 nav {
     display: flex;
     flex-direction: row;
@@ -50,6 +55,10 @@ nav {
 .buttons :nth-child(2) {
     color: #F8FAFC;
     background-color: #1D4ED8;
+}
+
+header img {
+    display: none;
 }
 
 main {
@@ -106,6 +115,10 @@ main {
     font: 700 18px 'Mulish';
     color: #fff;
     margin-right: 2vw;
+}
+
+.success>:last-child div>:last-child {
+    display: none;
 }
 
 .ticket {
@@ -305,4 +318,153 @@ footer {
     font: 400 14px 'Mulish';
     color: #4E4B66;
     text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .buttons {
+        visibility: hidden;
+    }
+
+    header img {
+        display: block;
+    }
+
+    main {
+        flex-direction: column;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .success {
+        width: 100%;
+        background-position: center;
+    }
+
+    .success::before {
+        width: 100%;
+        height: 127vh;
+    }
+
+    .success>:first-child img {
+        width: 100%;
+        height: 40%;
+        padding: 0 15vw;
+    }
+
+    .success>:nth-child(2) {
+        font: 700 40px 'Mulish';
+        text-align: center;
+    }
+
+    .success>:nth-child(3) {
+        font: 400 18px 'Mulish';
+        text-align: center
+    }
+
+    .success>:last-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .success>:last-child p {
+        font: 700 16px 'Mulish';
+        text-align: center;
+        margin: 3vh 0;
+    }
+
+    .success>:last-child div>:first-child {
+        display: none;
+    }
+
+    .success>:last-child div>:last-child {
+        display: block;
+    }
+
+    .ticket {
+        width:100%;
+    }
+
+    .summary {
+        padding: 5vh 7vw;
+    }
+
+    .total {
+        padding: 2vh 1vw;
+        justify-content: space-evenly;
+    }
+
+    .total>:nth-child(2) {
+        text-align: left;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .aboutus, .explore, .contact-us, .sponsor {
+        width: 100%;
+    }
+
+    .explore {
+        display: grid;
+        grid-template-rows: repeat(3, 7vh);
+        grid-template-areas: 
+        'a . .'
+        'b c d'
+        'e . .';
+    }
+
+    .explore :first-child {
+        grid-area: a;
+    }
+
+    .explore>:nth-child(2) {
+        grid-area: b;
+    }
+
+    .explore>:nth-child(3) {
+        grid-area: c;
+    }
+
+    .explore>:nth-child(4) {
+        grid-area: d;
+    }
+
+    .explore>:nth-child(5) {
+        grid-area: e;
+    }
+
+    .sponsor img {
+        width: 30%;
+        height: 50%;
+        margin-right: 1vw;
+    }
+
+    .contact-us>:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-us>div>div>p {
+        display: none;
+    }
+
+    .copyright {
+        text-align: left;
+    }
 }
