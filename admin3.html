@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin3.css">
+    <title>Tickitz - Add Movie</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/tickitz2.png" alt="Logo Tickitz">
+        </div>
+        <nav>
+            <p>Dashboard</p>
+            <p>Movie</p>
+        </nav>
+        <div class="account">
+            <div>Location</div>
+            <div>
+                <img src="./img/dropdown.png" alt="">
+                <img src="./img/Search.png" alt="">
+            </div>
+            <div><img src="./img/pp.png" alt="Profile"></div>
+        </div>
+    </header>
+    <main>
+        <section class="add-movie">
+            <p>Add New Movie</p>
+            <form>
+                <label for="upload">Upload Image</label> <br>
+                <button name="upload">Upload</button> <br><br>
+                <label for="name">Movie Name</label> <br>
+                <input type="text" name="name" value="Spider-Man: Homecoming" readonly> <br><br>
+                <label for="category">Category</label> <br>
+                <input type="text" name="category" value="Action, Adventure, Sci-fi" readonly> <br><br>
+                <div>
+                    <div>
+                        <label for="date">Release Date</label> <br>
+                        <input type="text" name="date" value="07/05/2020" readonly>
+                    </div>
+                    <div>
+                        <label for="duration">Duration</label> <br>
+                        <div>
+                            <input type="number" name="duration" value="2" readonly>
+                            <input type="number" name="duration" value="13" readonly>
+                        </div>
+                    </div>
+                </div>
+                <label for="director">Director Name</label> <br>
+                <input type="text" name="director" value="Jon Watts" readonly> <br><br>
+                <label for="cast">Casts</label> <br>
+                <input type="text" name="cast" value="Tom Holland, Michael Keaton, Robert Downey Jr." readonly> <br><br>
+                <label for="synopsis">Synopsis</label><br>
+                <textarea name="synopsis">Thrilled by his experience with the Avengers, Peter returns home, where he lives with his Aunt May, |</textarea>
+                <label for="loc">Add Location</label> <br>
+                <input type="text" name="loc" value="Purwokerto, Bandung, Bekasi" readonly> <br><br>
+                <label for="date">Set Date & Time</label> <br>
+                <input type="date" name="date"> <br>
+                <div class="date">
+                    <div id="set">+</div>
+                    <p>08.30am</p>
+                    <p>10.30pm</p>
+                </div>
+            </form>
+            <button>Save Movie</button>
+        </section>
+    </main>
+</body>
+</html>
