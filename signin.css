@@ -162,3 +162,17 @@ form button {
 .socmed div img, .socmed div p {
     padding: 0 1vw;
 }
+
+@media screen and (max-width: 767px) {
+    body {
+        background-position: center top;
+    }
+
+    .signin {
+        margin: 0 5vw;
+    }
+    
+    .socmed div p {
+        display: none;
+    }
+}
