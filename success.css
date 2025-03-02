@@ -57,7 +57,7 @@ nav {
     background-color: #1D4ED8;
 }
 
-header img {
+header>:last-child {
     display: none;
 }
 
@@ -337,7 +337,7 @@ footer {
         visibility: hidden;
     }
 
-    header img {
+    header>:last-child {
         display: block;
     }
 

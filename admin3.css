@@ -72,7 +72,7 @@ nav>:nth-child(2) {
     object-fit: cover;
 }
 
-header img {
+header>:last-child {
     display: none;
 }
 
@@ -197,7 +197,7 @@ main {
         visibility: hidden;
     }
 
-    header img {
+    header>:last-child {
         display: block;
     }
 

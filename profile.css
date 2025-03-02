@@ -68,6 +68,10 @@ nav {
     object-fit: cover;
 }
 
+header>:last-child {
+    display: none;
+}
+
 main {
     background-color: #A0A3BD;
     padding: 10vh 5vw;
@@ -181,13 +185,13 @@ main {
     font: 400 10px 'Mulish';
 }
 
-.info>:last-child>:last-child p {
+.info>:last-child>:nth-child(3) p {
     font: 400 14px 'Mulish';
     color: #4E4B66;
     text-align: center;
 }
 
-.info>:last-child>:last-child>div {
+.info>:last-child>:nth-child(3)>div {
     background: #F5F6F8;
     border-radius: 8px;
     height: 1vh;
@@ -195,11 +199,15 @@ main {
     box-shadow: inset 0 -2px 5px rgba(0,0,0,0.2);
 }
 
-.info>:last-child>:last-child>div>div {
+.info>:last-child>:nth-child(3)>div>div {
     background: #1D4ED8;
     border-radius: 8px;
     height: 1vh;
     width: 50%;
+}
+
+.info>:last-child>:nth-child(4) {
+    display: none;
 }
 
 main>:nth-child(2) {
@@ -324,4 +332,83 @@ main>:nth-child(2) button {
     margin: 7vh 0;
     width: 50%;
     cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .account {
+        visibility: hidden;
+    }
+
+    header>:last-child {
+        display: block;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .info {
+        width: 100%;
+        margin: 7vh 0;
+        padding: 5vh 7vw;
+    }
+
+    .info>:first-child>:first-child img {
+        display: none;
+    }
+
+    .info>:first-child>:nth-child(2) {
+        margin: 5vh 0;
+        position: relative;
+        left: 40%;
+    }
+
+    .info>:last-child>:nth-child(2) div {
+        padding: 4vh 5vw;
+    }
+
+    .info>:last-child>:nth-child(4) {
+        display: block;
+        border: 1px solid #1D4ED8;
+        border-radius: 16px;
+        color: #1D4ED8;
+        padding: 2vh 1vw;
+        margin: 7vh 0;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .detail, .privacy, main>div>button {
+        display: none;
+    }
+
+    main>:nth-child(2){
+        order: -1;
+        width: 100%;
+        margin: 0;
+    }
+
+    .option {
+        padding: 5vh 15vw;
+        border-radius: 0;
+        justify-content: space-between;
+    }
+
+    .option p {
+        margin-right: 0;
+    }
 }

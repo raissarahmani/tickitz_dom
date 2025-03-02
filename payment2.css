@@ -57,6 +57,10 @@ nav {
     background-color: #1D4ED8;
 }
 
+header>:last-child {
+    display: none;
+}
+
 main {
     background: rgba(160, 163, 189, 0.2);
     padding: 5vh 10vw 10vh 10vw;
@@ -413,7 +417,7 @@ footer {
         visibility: hidden;
     }
 
-    header img {
+    header>:last-child {
         display: block;
     }
 
