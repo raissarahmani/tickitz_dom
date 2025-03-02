@@ -72,6 +72,10 @@ nav>:nth-child(2) {
     object-fit: cover;
 }
 
+header img {
+    display: none;
+}
+
 main {
     background: rgba(160, 163, 189, 0.2);
     padding: 5vh 10vw 10vh 10vw;
@@ -104,6 +108,7 @@ main {
     padding: 1vh 2vw;
     margin-top: 1vh;
     color: #fff;
+    cursor: pointer;
 }
 
 .add-movie form input {
@@ -161,6 +166,7 @@ main {
     padding: 0.5vh 1vw;
     margin: 2vh 0;
     text-align: center;
+    cursor: pointer;
 }
 
 .add-movie>button {
@@ -172,4 +178,62 @@ main {
     width: 100%;
     padding: 2vh 1vw;
     cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .account {
+        visibility: hidden;
+    }
+
+    header img {
+        display: block;
+    }
+
+    .add-movie form>div {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .add-movie form>div>:first-child,
+    .add-movie form>div>:last-child {
+        width: 100%;
+        margin: 1vh 0;
+    }
+
+    .add-movie form>div>:last-child>:last-child {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .add-movie form textarea {
+        min-height: 20vh;
+    }
+
+    .add-movie form>.date {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .add-movie form>.date p {
+        width: 33%;
+    }
+
+    #set {
+        width: 33%;
+        margin-right: 1vw;
+    }
 }
