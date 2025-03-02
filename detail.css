@@ -17,6 +17,11 @@ header {
     width: 15%;
 }
 
+.logo img {
+    object-fit: contain;
+    width: 70%;
+}
+
 nav {
     display: flex;
     flex-direction: row;
@@ -159,7 +164,7 @@ main {
     margin: 5vh 0;
 }
 
-.book>:nth-child(2) div {
+.book>:nth-child(2)>div {
     display: flex;
     flex-direction: column;
     margin-right: 1vw;
@@ -167,12 +172,26 @@ main {
     position: relative;
 }
 
-.book>:nth-child(2) div input,
-.book>:nth-child(2) div select {
-    margin: 4vh 1vw 0 0;
-    padding: 2vh 2vw;
+.book>:nth-child(2)>div>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     border: 1px solid #efd0f6;
     border-radius: 6px;
+    margin: 2vh 0;
+    padding: 0 1vw;
+    background-color: #EFF0F6;
+}
+
+.book>:nth-child(2)>div>div img {
+    width: 10%;
+    height: 40%;
+}
+
+.book>:nth-child(2)>div>div>select {
+    margin-left: 1vw;
+    padding: 2vh 2vw;
+    border: none;
     font: 600 15px 'Mulish';
     background-color: #EFF0F6;
     width: 100%;
@@ -187,7 +206,7 @@ main {
     color: #fff;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 12%;
     right: 0;
     cursor: pointer;
 }
