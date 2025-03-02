@@ -338,61 +338,78 @@ main>:nth-child(2) {
     color: #14142B;
 }
 
-.history>:nth-child(4)>:nth-child(2),
-.history>:nth-child(4)>:nth-child(3) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 5vh 0;
-}
-
-.history>:nth-child(4)>:nth-child(2) p,
-.history>:nth-child(4)>:nth-child(3) p,
-.history>:nth-child(4)>:nth-child(4) {
-    font: 400 14px 'Mulish';
-    color: #8692A6;
-}
-
-.history>:nth-child(4)>:nth-child(2)>div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.history>:nth-child(4)>:last-child {
+    display: grid;
+    grid-template-columns: 15vw 10vw 7vw 10vw 7vw;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    'a b c d h'
+    'a e f g h';
+    width: 70%;
     align-items: center;
 }
 
-.history>:nth-child(4)>:nth-child(2)>div>p {
-    font: 700 18px 'Mulish';
+.history>:nth-child(4)>:last-child>:first-child {
+    grid-area: a;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    padding: 0 1vw;
+}
+
+.history>:nth-child(4)>:last-child>:nth-child(2) {
+    grid-area: b;
+    margin: 0 1vw;
+    padding-top: 3vh;
+}
+
+.history>:nth-child(4)>:last-child>:nth-child(3) {
+    grid-area: c;
+    padding-top: 3vh;
+}
+
+.history>:nth-child(4)>:last-child>:nth-child(4) {
+    grid-area: d;
+    padding-top: 3vh;
+}
+
+.history>:nth-child(4)>:last-child>:nth-child(5) {
+    grid-area: e;
+    margin: 0 1vw;
+    padding-bottom: 3vh;
+}
+
+.history>:nth-child(4)>:last-child>:nth-child(6) {
+    grid-area: f;
+    padding: 0 0 3vh 3vw;
+}
+
+.history>:nth-child(4)>:last-child>:nth-child(7) {
+    grid-area: g;
+    padding: 0 0 3vh 3vw;
+}
+
+.history>:nth-child(4)>:last-child>:nth-child(8) {
+    grid-area: h;
+}
+
+.history>:nth-child(4)>:last-child>div>:first-child {
+    font: 600 12px 'Mulish';
+    color: #AAAAAA;
+}
+
+.history>:nth-child(4)>:last-child>div>:nth-child(2) {
+    font: 600 14px 'Mulish';
+    color: #14142B;
+    margin-top: 2vh;
+}
+
+.history>:nth-child(4)>:last-child>div:last-of-type>:first-child {
+    font: 400 16px 'Mulish';
     color: #14142B;
 }
 
-.history>:nth-child(4)>:nth-child(2)>div>button {
-    font: 400 14px 'Mulish';
-    color: #1D4ED8;
-    border: 1px solid #1D4ED8;
-    border-radius: 5px;
-    padding: 1vh 1vw;
-    margin-left: 1vw;
-    background-color: #fff;
-    cursor: pointer;
-}
-
-.history>:nth-child(4)>:nth-child(3)>:last-child {
-    color: #1D4ED8;
-    font: 700 18px 'Mulish';
-}
-
-span {
-    color: #E82C2C;
-}
-
-.history>:nth-child(4)>:last-child {
-    background-color: #1D4ED8;
-    color: #fff;
-    border: 1px solid #1D4ED8;
-    border-radius: 5px;
-    font: 400 14px 'Mulish';
-    padding: 2vh 1vw;
-    margin-top: 5vh;
-    width: 25%;
-    cursor: pointer;
+.history>:nth-child(4)>:last-child>div:last-of-type>:last-child {
+    font: 600 24px 'Mulish';
+    color: #14142B;
 }
