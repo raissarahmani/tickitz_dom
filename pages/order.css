@@ -17,6 +17,11 @@ header {
     width: 15%;
 }
 
+.logo img {
+    object-fit: contain;
+    width: 70%;
+}
+
 nav {
     display: flex;
     flex-direction: row;
