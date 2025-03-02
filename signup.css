@@ -45,36 +45,43 @@ main {
 .steps {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .first-step div {
     background-color: #1D4ED8;
-    border-radius: 47px;
+    border-radius: 50%;
     color: #fff;
     margin: 5vh 4vw 1vh;
     padding: 1.3vh 1vw;
     position: relative;
-    font: 500 16px 'Mulish'
+    font: 500 16px 'Mulish';
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 
 .second-step div, .third-step div {
     background-color: #A0A3BD;
-    border-radius: 47px;
+    border-radius: 50%;
     color: #fff;
     margin: 5vh 4vw 1vh;
     padding: 1.3vh 1vw;
     position: relative;
-    font: 500 16px 'Mulish'
+    font: 500 16px 'Mulish';
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.second-step div::before, .third-step div::before {
-    content:"";
-    position: absolute;
-    right:100%;
-    top: 50%;
-    width:14vw;
-    height:1vh;
-    border-top: 1px dashed #A0A3BD;
+.steps>:nth-child(2), .steps>:nth-child(4) {
+    flex: 1;
+    border-bottom: 1px dashed #A0A3BD;
 }
 
 .first-step p {
@@ -208,4 +215,15 @@ form button {
 
 .socmed div img, .socmed div p {
     padding: 0 1vw;
+}
+
+@media screen and (max-width: 767px) {
+    .steps, #tnc, .socmed div p,
+    .signup form :nth-last-child(2) {
+        display: none;
+    }
+
+    .acc {
+        padding: 0 1vw;
+    }
 }
