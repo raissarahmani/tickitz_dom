@@ -218,6 +218,10 @@ form button {
 }
 
 @media screen and (max-width: 767px) {
+    body {
+        background-position: center top;
+    }
+    
     .steps, #tnc, .socmed div p,
     .signup form :nth-last-child(2) {
         display: none;
