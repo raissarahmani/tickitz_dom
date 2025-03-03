@@ -11,6 +11,9 @@ header {
     padding: 5vh 10vw;
     border-bottom: 1px solid #DEDEDE;
     background-color: #fff;
+    position: sticky;
+    top:0;
+    z-index: 1;
 }
 
 .logo {
@@ -31,8 +34,9 @@ nav {
     width: 60%;
 }
 
-nav>:first-child {
+nav p:hover {
     color: #1D4ED8;
+    cursor: pointer;
 }
 
 .account {

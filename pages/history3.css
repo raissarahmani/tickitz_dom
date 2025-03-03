@@ -11,6 +11,9 @@ header {
     padding: 5vh 10vw;
     border-bottom: 1px solid #DEDEDE;
     background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .logo {
@@ -29,6 +32,11 @@ nav {
     font: 400 14px 'Mulish';
     color: #0F172A;
     width: 60%;
+}
+
+nav p:hover {
+    border-bottom: 1px solid #1D4ED8;
+    cursor: pointer;
 }
 
 .account {
@@ -68,7 +76,7 @@ nav {
     object-fit: cover;
 }
 
-.header>:last-child {
+header>:last-child {
     display: none;
 }
 
@@ -221,12 +229,13 @@ main>:nth-child(2) {
 
 .option p {
     font: 400 18px 'Mulish';
-    color: #14142B;
+    color: #AAAAAA;
     margin-right: 3vw;
+    cursor: pointer;
 }
 
-.option>:first-child {
-    color: #AAAAAA;
+.option p:hover {
+    color:  #14142B;;
 }
 
 .history {
