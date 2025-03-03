@@ -72,6 +72,10 @@ nav>:first-child {
     object-fit: cover;
 }
 
+header>:last-child {
+    display: none;
+}
+
 main {
     background: rgba(160, 163, 189, 0.2);
     padding: 5vh 10vw 10vh 10vw;
@@ -200,4 +204,38 @@ main {
     position: absolute;
     bottom: 55%;
     left: 35%;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .account {
+        visibility: hidden;
+    }
+
+    header>:last-child {
+        display: block;
+    }
+
+    .sales>:first-child>form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sales>:first-child>form select,
+    .sales>:first-child>form button  {
+        width: 100%;
+        margin-top: 2vh;
+    }
+
 }
