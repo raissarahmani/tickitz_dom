@@ -68,6 +68,10 @@ nav {
     object-fit: cover;
 }
 
+header>:last-child {
+    display: none;
+}
+
 main {
     background-color: #A0A3BD;
     padding: 10vh 5vw;
@@ -396,3 +400,106 @@ span {
     width: 25%;
     cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .account {
+        visibility: hidden;
+    }
+
+    header>:last-child {
+        display: block;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    .info {
+        display: none;
+    }
+
+    main>:nth-child(2){
+        order: -1;
+        width: 100%;
+        margin: 0;
+    }
+
+    .option {
+        padding: 5vh 15vw;
+        border-radius: 0;
+        justify-content: space-between;
+    }
+
+    .option p {
+        margin-right: 0;
+    }
+
+    .history {
+        margin: 7vh 3vw;
+        padding: 7vh 5vw;
+        grid-template-areas: 
+        'a'
+        'b'
+        'c'
+        'g';
+    }
+
+    .history>:first-child {
+        grid-template-areas: 
+        'f'
+        'd'
+        'e';
+    }
+
+    .history>:first-child img {
+        justify-self: start;
+    }
+
+    .history>:first-child>:first-child {
+        margin: 3vh 0;
+    }
+
+    .history>:nth-child(2)>:first-child,
+    #active, #notpaid {
+        width: 100%;
+        margin: 1vh 0;
+    }
+
+    .history>:nth-child(3) {
+        justify-content: center;
+    }
+
+    .history>:nth-child(4)>:nth-child(2),
+    .history>:nth-child(4)>:nth-child(3) {
+        flex-direction: column;
+    }
+
+    .history>:nth-child(4)>:last-child {
+        width: 100%;
+    }
+
+    .history:last-of-type>:nth-child(2)>:last-child {
+        display: none;
+    }
+
+    .history:last-of-type>:nth-child(3) {
+        display: none;
+    }
+
+}
+        
+
