@@ -1,0 +1,727 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5vh 10vw;
+    border-bottom: 1px solid #DEDEDE;
+    background-color: #fff;
+}
+
+.logo {
+    width: 15%;
+}
+
+.logo img {
+    object-fit: contain;
+    width: 70%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font: 400 14px 'Mulish';
+    color: #0F172A;
+    width: 60%;
+}
+
+.buttons {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.buttons button {
+   font: 400 14px 'Mulish';
+   border: 1px solid #1D4ED8;
+   border-radius: 5px;
+   margin: 0 0.5vw;
+   padding: 2vh 1.5vw;
+   cursor: pointer;
+}
+
+.buttons :first-child {
+    color: #1D4ED8;
+    background-color: #fff;
+}
+
+.buttons :nth-child(2) {
+    color: #F8FAFC;
+    background-color: #1D4ED8;
+}
+
+header>:last-child {
+    display: none;
+}
+
+.adsect {
+    padding: 10vh 10vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.adsect-text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1vw;
+}
+
+.adsect-text :first-child {
+    font: 700 18px 'Mulish';
+    color:#1D4ED8;
+}
+
+.adsect-text :nth-child(2) {
+    font: 500 48px 'Mulish';
+    color: #121212;
+    margin: 2vh 0;
+}
+
+.adsect-text :nth-child(3) {
+    font: 400 16px 'Mulish';
+    color: #A0A3BD;
+}
+
+.adsect-pic {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 1vw;
+}
+
+.movie-pic1, .movie-pic2 {
+    padding: 0 0.5vw;
+}
+
+.johnwick, .roblox {
+    width: 15vw;
+    height: 30vh;
+}
+
+.spiderman, .lionking {
+    width: 15vw;
+    height: 40vh;
+}
+
+.johnwick img, .spiderman img,
+.lionking img, .roblox img {
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+    height: 100%;
+}
+
+.johnwick img, .lionking img {
+    border-radius: 20px 20px 0 0;
+    padding: 1vh 0;
+}
+
+.spiderman img, .roblox img {
+    border-radius: 0 0 20px 20px;
+    padding: 1vh 0;
+}
+
+.intro, .newsletter {
+    padding: 5vh 10vw;
+}
+
+.intro :first-child, .upcoming-desc :first-child {
+    font: 700 18px 'Mulish';
+    color: #1D4ED8;
+}
+
+.intro :nth-child(2), .upcoming-desc :nth-child(2) {
+    font: 400 32px 'Mulish';
+    color: #121212;
+    margin: 3vh 0;
+}
+
+.selling-point {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sp-container {
+    padding: 0 1vw;
+}
+
+.icon-container {
+    background-color: rgba(29, 78, 216, 0.2);
+    border-radius: 50%;
+    width: 7vh;
+    height: 7vh;
+    position: relative;
+}
+
+.icon-container img {
+    object-fit: contain;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.sp-container :nth-child(2) {
+    font: 700 18px 'Mulish';
+    color: #18181B;
+}
+
+.sp-container :nth-child(3) {
+    font: 400 16px 'Mulish';
+    color: #A0A3BD;
+    line-height: 32px;
+}
+
+.movie-today, .upcoming-movie {
+    padding: 7vh 10vw;
+}
+
+.subtitle {
+    font: 700 18px 'Mulish';
+    color: #1D4ED8;
+    text-align: center;
+}
+
+.today-desc {
+    font: 400 32px 'Mulish';
+    color: #121212;
+    text-align: center;
+    margin: 3vh 0;
+}
+
+.movie-now, .movie-up {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1vw;
+    overflow-x: scroll;
+}
+
+.container-now, .container-up {
+    width: 20%;
+    height: 100%;
+    border-radius: 6px;
+    position: relative;
+}
+
+.detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    background-color: rgba(0,0,0,0.4);
+    object-fit: cover;
+    width: 100%;
+    height: 75%;
+    border-radius: 6px;
+    padding: 0 3vw;
+    z-index: 2;
+}
+
+.detail div {
+    margin: 1vh 2vw;
+    padding: 2vh 2vw;
+    color: #fff;
+    font: 400 14px 'Mulish';
+    width: 100%;
+    text-align: center;
+}
+
+.detail :first-child {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.detail :nth-child(2) {
+    border: 1px solid #1D4ED8;
+    border-radius: 5px;
+    background-color: #1D4ED8;
+}
+
+.container-now:hover .detail {
+    visibility: visible;
+}
+
+.container-now img, .container-up img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+} 
+
+.recomended {
+    background-color: #1D4ED8;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    top: 2%;
+    z-index: 1;
+    font: 400 14px 'Mulish';
+    color: rgba(255, 255, 255, 1);
+    padding: 0.5vh 1.5vw;
+}
+
+.movie-title {
+    font: 700 24px 'Mulish';
+    color: #14142B;
+    text-align: left;
+    margin: 2vh 0;
+}
+
+.genre {
+    display: flex;
+    flex-direction: row;
+    font: 400 16px 'Mulish';
+}
+
+.genre>p {
+    color: #A0A3BD;
+    background: rgba(160, 163, 189, 0.1);
+    border-radius: 20px;
+    margin-right: 1vw;
+    padding: 1.5vh;
+    text-align: left;
+}
+
+.viewall {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5vh 0;
+    cursor: pointer;
+}
+
+.viewall p {
+    color: #1D4ED8;
+    font: 700 18px 'Mulish';
+    padding: 0 1vw;
+}
+
+.upcoming-desc {
+    display: grid;
+    grid-template-columns: 50vw 25vw;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+    "a ." 
+    "b c";
+}
+
+.upcoming-desc :first-child {
+    grid-area: a;
+}
+
+.upcoming-desc :nth-child(2) {
+    grid-area: b;
+}
+
+.arrow {
+    grid-area: c;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+
+.arrow :first-child {
+    background-color: #A0A3BD;
+    position: relative;
+    margin-right: 0.5vw;
+    cursor: pointer;
+}
+
+.arrow :first-child img {
+    background-color: #A0A3BD;
+    border-radius: 40px;
+    position: absolute;
+    top: 25%;
+}
+
+.arrow :nth-child(2) {
+    background-color: #1D4ED8;
+    border-radius: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.arrow :nth-child(2) img {
+    background-color: #1D4ED8;
+    border-radius: 40px;
+    position: absolute;
+    top: 25%;
+}
+
+.release {
+    font: 700 18px 'Mulish';
+    color: #1D4ED8;
+    margin-bottom: 2vh;
+}
+
+.container-news  {
+    background: #2563EB;
+    border-radius: 20px;
+    padding: 15vh 0;
+    position: relative;
+}
+
+.subs {
+    font: 400 48px 'Mulish';
+    color:#fff;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+.newsletter form {
+    padding: 0 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.newsletter form input {
+    background-color: #2563EB;
+    border: 1px solid #D4D4D8;
+    border-radius: 9px;
+    padding: 3vh 1.5vw;
+    color: #fff;
+    width: 32%;
+}
+
+::placeholder {
+    color: #fff;
+    font: 400 16px 'Mulish';
+}
+
+.newsletter form button {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 9px;
+    color:#2563EB;
+    font: 700 18px 'Mulish';
+    width: 32%;
+    cursor: pointer;
+}
+
+.container-news img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+footer {
+    padding: 10vh 10vw;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5vh;
+}
+
+.aboutus {
+    width: 40%;
+}
+
+.aboutus p {
+    font: 400 16px 'Mulish';
+    color: #6E7191;
+    margin: 2vh 0;
+    padding: 0 1vw;
+    line-height: 32px;
+}
+
+.explore {
+    width: 15%;
+    padding: 1vw;
+}
+
+.explore :first-child, .sponsor :first-child, .contact-us :first-child {
+    font: 700 16px 'Mulish';
+    color: #000;
+    margin-bottom: 5vh;
+}
+
+.explore p {
+    font: 400 14px 'Mulish';
+    color:#4E4B66;
+    margin: 3vh 0;
+}
+
+.sponsor {
+    width: 25%;
+    padding: 1vw;
+}
+
+.sponsor img {
+    margin: 2vh 0;
+}
+
+.contact-us {
+    width: 20%;
+    padding: 1vw;
+}
+
+.socmed {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    'a b';
+}
+
+.socmed img {
+    grid-area: a;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.socmed p {
+    grid-area: b;
+    font: 600 14px 'Mulish';
+    color: #6E7191;
+}
+
+.copyright {
+    font: 400 14px 'Mulish';
+    color: #4E4B66;
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .buttons {
+        visibility: hidden;
+    }
+
+    header>:last-child {
+        display: block;
+    }
+
+    .adsect {
+        flex-direction: column;
+    }
+
+    .adsect-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .adsect-text :nth-child(2) {
+        font: 500 40px 'Mulish';
+        margin: 5vh 0;
+    }
+
+    .adsect-pic {
+        width: 100%;
+        margin: 5vh 0;
+    }
+
+    .johnwick, .roblox {
+        width: 35vw;
+        height: 25vh;
+    }
+    
+    .spiderman, .lionking {
+        width: 35vw;
+        height: 45vh;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    .selling-point {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sp-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recomended, .viewall {
+        visibility: hidden;
+    }
+
+    .movie-now, .movie-up {
+        overflow-x: scroll;
+        padding: 1vh 1vw;
+    }
+
+    .container-now {
+        min-width: 250px;
+        max-width: 300px;
+        height: 100vh;
+        margin: 0 1vw;
+        border-radius: 6px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 22%;
+        justify-content: space-between;
+    }
+
+    .container-now img {
+        height: 75%;
+        width: 100%;
+    } 
+
+    .detail {
+        width: 90%;
+        height: 70%;
+    }
+
+    .detail div {
+        font: 400 10px 'Mulish';
+    }
+
+    .movie-title {
+        font: 700 18px 'Mulish';
+        margin: 1vh 0;
+    }
+
+    .genre>p {
+        font: 400 10px 'Mulish';
+        padding: 1vh;
+    }
+
+    .upcoming-desc {
+        display: block;
+        text-align: center;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .container-up {
+        min-width: 250px;
+        max-width: 300px;
+        height: 100vh;
+        margin: 0 1vw;
+        border-radius: 6px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 22%;
+        justify-content: space-between;
+    }
+
+    .container-up img {
+        width: 100%;
+        height: auto;
+    }
+
+    .release {
+        font: 700 14px 'Mulish';
+    }
+
+    .subs {
+        font: 400 36px 'Mulish';
+        margin-bottom: 5vh;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter form input {
+        width: 100%;
+        margin: 1vh 0;
+    }
+
+    .newsletter form button {
+        width: 100%;
+        margin: 1vh 0 15vh 0;
+        padding: 2vh 0;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .aboutus, .explore, .contact-us, .sponsor {
+        width: 100%;
+    }
+
+    .explore {
+        display: grid;
+        grid-template-rows: repeat(3, 7vh);
+        grid-template-areas: 
+        'a . .'
+        'b c d'
+        'e . .';
+    }
+
+    .explore :first-child {
+        grid-area: a;
+    }
+
+    .explore>:nth-child(2) {
+        grid-area: b;
+    }
+
+    .explore>:nth-child(3) {
+        grid-area: c;
+    }
+
+    .explore>:nth-child(4) {
+        grid-area: d;
+    }
+
+    .explore>:nth-child(5) {
+        grid-area: e;
+    }
+
+    .sponsor img {
+        width: 30%;
+        height: 50%;
+        margin-right: 1vw;
+    }
+
+    .contact-us>:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-us>div>div>p {
+        display: none;
+    }
+
+    .copyright {
+        text-align: left;
+    }
+
+}
