@@ -78,12 +78,22 @@ main {
     height: 60vh;
 }
 
-.poster {
-    height: 25%;
-    border-radius: 6px;
+main>div {
+    display: grid;
+    grid-template-columns: 20vw 55vw;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+    'a .'
+    'a b';
+    align-items: center;
     position: absolute;
-    top: 15%;
-    left: 10vw;
+    top: 17%;
+    left: 10%;
+}
+
+.poster {
+    grid-area: a;
+    border-radius: 6px;
 }
 
 .poster img {
@@ -93,9 +103,8 @@ main {
 }
 
 .desc {
-    position: absolute;
-    top: 25%;
-    left: 35%;
+    grid-area: b;
+    padding-left: 3vw;
 }
 
 .desc>p {
