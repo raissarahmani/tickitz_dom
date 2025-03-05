@@ -478,6 +478,126 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .buttons {
+        visibility: hidden;
+    }
+
+    header>:last-child {
+        display: block;
+    }
+
+    .pic {
+        background-position: center top;
+        height: 80vh;
+    }
+
+    main>div {
+        display: grid;
+        grid-template-rows: 70vh 50vh;
+        grid-template-areas: 
+        'a a'
+        'b b';
+        justify-content: center;
+        align-items: center;
+    }
+
+    .poster {
+        grid-area: a;
+        position: absolute;
+        top: -30%;
+        left: 15%;
+    }
+
+    .poster img {
+        object-fit: contain;
+        height: 50%;
+        width: 100%;
+    }
+
+    .desc {
+        grid-area: b;
+    }
+
+    .desc>p {
+        font: 700 24px 'Mulish';
+        text-align: center;
+    }
+
+    .desc :nth-child(2) {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .detail {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 35vw 35vw;
+        grid-template-rows: 15vh 15vh;
+    }
+
+    .detail2, .detail4 {
+        padding-left: 3vw;
+    }
+
+    .synopsis {
+        padding: 110vh 10vw 0 10vw;
+    }
+
+    .book p:first-of-type {
+        display: none;
+    }
+
+    .book>:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .book>:nth-child(2)>div {
+        width: 100%;
+    }
+
+    .book>:nth-child(2)>div>label {
+        display: none;
+    }
+
+    .book>:nth-child(2)>div>div img {
+        width:5%;
+        height: 5%;
+        margin-left: 2vw;
+    }
+
+    .book>:nth-child(2)>:nth-child(2) {
+        display: none;
+    }
+
+    .book :nth-child(2) div button {
+        position: relative;
+        bottom: 0;
+    }
+
+    .cinema>:nth-child(2) {
+        flex-direction: column;
+    }
+
+    .cinema>:nth-child(2) div {
+        width: 100%;
+    }
+
+    .cinema button {
+        display: none;
+    }
+
     .footer {
         grid-template-columns: 1fr;
         grid-template-areas: 
