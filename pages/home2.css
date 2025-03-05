@@ -65,6 +65,10 @@ nav p:hover {
     background-color: #1D4ED8;
 }
 
+.header>:last-child {
+    display: none;
+}
+
 .adsect {
     background-image: url(../img/avenger.png);
     background-position: 50% 50%;
@@ -464,4 +468,158 @@ footer {
     font: 400 14px 'Mulish';
     color: #4E4B66;
     text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .buttons {
+        visibility: hidden;
+    }
+
+    header>:last-child {
+        display: block;
+    }
+
+    .adsect {
+        flex-direction: column;
+    }
+
+    .adsect-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .adsect-text :nth-child(2) {
+        font: 500 40px 'Mulish';
+        margin: 5vh 0;
+    }
+
+    .movie-now {
+        padding: 1vh 1vw;
+    }
+
+    .container-now {
+        min-width: 250px;
+        max-width: 300px;
+        height: 100vh;
+        margin: 0 1vw;
+        border-radius: 6px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 22%;
+        justify-content: space-between;
+    }
+
+    .container-now img {
+        height: 75%;
+        width: 100%;
+    } 
+
+    .detail {
+        width: 90%;
+        height: 70%;
+    }
+
+    .detail div {
+        font: 400 10px 'Mulish';
+    }
+
+    .movie-title {
+        font: 700 18px 'Mulish';
+        margin: 1vh 0;
+    }
+
+    .genre>p {
+        font: 400 10px 'Mulish';
+        padding: 1vh;
+    }
+
+    .subs {
+        font: 400 36px 'Mulish';
+        margin-bottom: 5vh;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+
+    .newsletter form input {
+        width: 100%;
+        margin: 1vh 0;
+    }
+
+    .newsletter form button {
+        width: 100%;
+        margin: 1vh 0 15vh 0;
+        padding: 2vh 0;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .aboutus, .explore, .contact-us, .sponsor {
+        width: 100%;
+    }
+
+    .explore {
+        display: grid;
+        grid-template-rows: repeat(3, 7vh);
+        grid-template-areas: 
+        'a . .'
+        'b c d'
+        'e . .';
+    }
+
+    .explore :first-child {
+        grid-area: a;
+    }
+
+    .explore>:nth-child(2) {
+        grid-area: b;
+    }
+
+    .explore>:nth-child(3) {
+        grid-area: c;
+    }
+
+    .explore>:nth-child(4) {
+        grid-area: d;
+    }
+
+    .explore>:nth-child(5) {
+        grid-area: e;
+    }
+
+    .sponsor img {
+        width: 30%;
+        height: 50%;
+        margin-right: 1vw;
+    }
+
+    .contact-us>:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contact-us>div>div>p {
+        display: none;
+    }
+
+    .copyright {
+        text-align: left;
+    }
 }
