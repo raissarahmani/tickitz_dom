@@ -105,7 +105,7 @@ main {
     color: #696F79;
 }
 
-.add-movie form button:first-of-type {
+/* .add-movie form input:first-of-type {
     background-color: #1D4ED8;
     border: 1px solid #1D4ED8;
     border-radius: 8px;
@@ -113,7 +113,7 @@ main {
     margin-top: 1vh;
     color: #fff;
     cursor: pointer;
-}
+} */
 
 .add-movie form input {
     font: 400 16px 'Mulish';
