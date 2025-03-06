@@ -76,6 +76,10 @@ nav p:hover {
     object-fit: cover;
 }
 
+header>:last-child {
+    display: none;
+}
+
 main {
     background: rgba(160, 163, 189, 0.2);
     padding: 5vh 10vw 10vh 10vw;
@@ -241,4 +245,30 @@ main {
     background-color: #1D4ED8;
     color: #fff;
     box-shadow: 0 2px 10px rgba(29,78,216,0.3);
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .account {
+        visibility: hidden;
+    }
+
+    header>:last-child {
+        display: block;
+    }
+
+    .list table {
+        overflow: scroll;
+    }
 }
