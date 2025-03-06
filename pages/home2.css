@@ -65,7 +65,7 @@ nav p:hover {
     background-color: #1D4ED8;
 }
 
-.header>:last-child {
+header>:last-child {
     display: none;
 }
 
@@ -101,13 +101,13 @@ nav p:hover {
 }
 
 .movie-today {
-    padding: 7vh 10vw;
+    padding: 4vh 10vw;
 }
 
 .movie-search {
     display: flex;
     flex-direction: row;
-    margin: 5vh 0 10vh 0;
+    margin: 5vh 0;
 }
 
 .movie-query {
@@ -148,7 +148,7 @@ nav p:hover {
 }
 
 .movie-genre {
-    margin: 1vh 0 1vh 2vw;
+    margin: 1vh 0 0 1vw;
 }
 
 .genres {
@@ -158,16 +158,12 @@ nav p:hover {
     margin-top: 1vh;
 }
 
-.genres :first-child {
-    font: 600 14px 'Nunito';
+.genres>div:hover {
     color: #fff;
     background-color: #1D4ED8;
-    border-radius: 10px;
-    margin: 1vh 0;
-    padding: 1vh 2vw;
 }
 
-.genres :not(:first-child) {
+.genres>div {
     font: 600 14px 'Nunito';
     color: #4E4B66;
     background-color: #fff;
@@ -177,16 +173,17 @@ nav p:hover {
 }
 
 .movie-now {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 7vh;
+    margin-bottom: 15vh;
 }
 
 .container-now {
-    width: 20%;
-    height: 40%;
+    width: 80%;
+    height: 70%;
     border-radius: 6px;
     position: relative;
 }
@@ -203,7 +200,7 @@ nav p:hover {
     background-color: rgba(0,0,0,0.4);
     object-fit: cover;
     width: 100%;
-    height: 75%;
+    height: 100%;
     border-radius: 6px;
     padding: 0 3vw;
     z-index: 2;
@@ -290,8 +287,8 @@ nav p:hover {
     margin: 0 0.5vw;
     text-align: center;
     cursor: pointer;
-    width: 2vw;
-    height: 2vw;
+    width: 5vh;
+    height: 5vh;
 }
 
 .pages div:hover {
@@ -591,15 +588,40 @@ footer {
         margin: 5vh 0;
     }
 
+    .movie-search {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .movie-query {
+        width: 100%;
+    }
+
+    .movie-query div {
+        align-items: center;
+        margin: 0 1vw;
+    }
+
+    .movie-query img {
+        width: 5%;
+        height: 5%;
+    }
+
+    .genres>div {
+        font: 400 10px 'Nunito';
+    }
+
     .movie-now {
         padding: 1vh 1vw;
+        overflow-x: scroll;
     }
 
     .container-now {
         min-width: 250px;
         max-width: 300px;
         height: 100vh;
-        margin: 0 1vw;
+        margin: 0 1vw 5vh 0;
         border-radius: 6px;
         position: relative;
         display: flex;
@@ -614,8 +636,8 @@ footer {
     } 
 
     .detail {
-        width: 90%;
-        height: 70%;
+        width: 100%;
+        height: 75%;
     }
 
     .detail div {
@@ -624,7 +646,7 @@ footer {
 
     .movie-title {
         font: 700 18px 'Mulish';
-        margin: 1vh 0;
+        margin: 0;
     }
 
     .genre>p {
