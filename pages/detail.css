@@ -65,6 +65,10 @@ nav p:hover {
     background-color: #1D4ED8;
 }
 
+header>:last-child {
+    display: none;
+}
+
 main {
     position: relative;
 }
