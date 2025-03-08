@@ -199,17 +199,6 @@ main {
     width: 80%;
 }
 
-.graph>:last-child {
-    width: 3vw;
-    height: 5vh;
-    background-color: #1D4ED8;
-    border-radius: 7px;
-    border: 2px solid #fff;
-    position: absolute;
-    bottom: 55%;
-    left: 35%;
-}
-
 @media screen and (max-width: 767px) {
     header {
         border-bottom: none;
