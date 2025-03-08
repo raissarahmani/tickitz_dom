@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="../styles/payment.css">
+    <script src="../script/payment.js" defer></script>
     <title>Tickitz - Payment</title>
 </head>
 <body>
@@ -62,31 +63,96 @@
                 <p>Personal Information</p>
                 <form>
                     <label for="name">Full Name</label> <br>
-                    <input type="text" name="name" value="Jonas El Rodriguez"> <br><br>
+                    <input type="text" name="name" placeholder="Jonas El Rodriguez"> <br>
+                    <p>Data should be filled</p>
                     <label for="email">Email</label> <br>
-                    <input type="email" name="email" value="jonasrodri123@gmail.com"> <br><br>
+                    <input type="email" name="email" placeholder="jonasrodri123@gmail.com"> <br>
+                    <p>Data should be filled</p>
                     <label for="phone">Phone Number</label> <br>
                     <div>
                         <p>+62</p>
-                        <input type="text" name="phone" value="81445687121"> <br><br>
+                        <input type="text" name="phone"> <br>
                     </div>
+                    <p>Data should be filled</p>
                 </form>
             </div>
             <div class="method">
                 <p>Payment Method</p>
-                <div>
-                    <div><img src="../img/google-pay.png" alt="Google Pay"></div>
-                    <div><img src="../img/visa.png" alt="Visa"></div>
-                    <div><img src="../img/gopay.png" alt="Gopay"></div>
-                    <div><img src="../img/paypal.png" alt="Paypal"></div>
-                    <div><img src="../img/dana.png" alt="Dana"></div>
-                    <div><img src="../img/bca.png" alt="BCA"></div>
-                    <div><img src="../img/bri.png" alt="BRI"></div>
-                    <div><img src="../img/ovo.png" alt="Ovo"></div>
-                </div>
+                <form>
+                    <div>
+                        <input type="radio" name="pay" id="gpay" value="gpay">
+                        <label for="gpay">
+                            <img src="../img/google-pay.png" alt="Google Pay">
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pay" id="visa" value="visa">
+                        <label for="visa">
+                            <img src="../img/visa.png" alt="Visa">
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pay" id="gopay" value="gopay">
+                        <label for="gopay">
+                            <img src="../img/gopay.png" alt="Gopay">
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pay" id="paypal" value="paypal">
+                        <label for="paypal">
+                            <img src="../img/paypal.png" alt="Paypal">
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pay" id="dana" value="dana">
+                        <label for="dana">
+                            <img src="../img/dana.png" alt="Dana">
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pay" id="bca" value="bca">
+                        <label for="bca">
+                            <img src="../img/bca.png" alt="BCA">
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pay" id="bri" value="bri">
+                        <label for="bri">
+                            <img src="../img/bri.png" alt="BRI">
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pay" id="ovo" value="ovo">
+                        <label for="ovo">
+                            <img src="../img/ovo.png" alt="Ovo">
+                        </label>
+                    </div>
+                </form>
+                <p>Choose payment method</p>
                 <button>Pay your order</button>
             </div>
         </section>
+        <div class="popup-container">
+            <section class="popup">
+                <p>Payment Info</p>
+                <div>
+                    <p>No. Rekening Virtual :</p>
+                    <div>
+                        <p>12321328913829724</p>
+                        <button>Copy</button>
+                    </div>
+                </div>
+                <div>
+                    <p>Total Payment :</p>
+                    <p>$30</p>
+                </div>
+                <p>Pay this payment bill before it is due, <span>on June 23, 2023.</span> If the bill has not been paid by the specified time, it will be forfeited</p>
+                <div>
+                    <button>Check Payment</button>
+                    <button>Pay Later</button>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="footer">
