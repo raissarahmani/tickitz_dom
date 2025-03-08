@@ -64,6 +64,7 @@ btnBook.addEventListener("click", (e) => {
     }
     if (cinemaSelected === false) {
         cinemaMsg.style.visibility = "visible"
+        return
     } else {
         cinemaMsg.style.visibility = "hidden"
     }
