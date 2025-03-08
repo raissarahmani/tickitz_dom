@@ -9,14 +9,14 @@ btnLogin.addEventListener("click", (e) => {
     const emailMsg = document.querySelector("form p:first-of-type")
     const passMsg = document.querySelector("form p:nth-of-type(2)")
 
-    if (email.value == 0) {
+    if (!email.value) {
         emailMsg.style.visibility = "visible"
         emailMsg.textContent = "Data must be filled"
     } else {
         emailMsg.style.visibility = "hidden"
     }
 
-    if (pass.value == 0) {
+    if (!pass.value) {
         passMsg.style.visibility = "visible"
         passMsg.textContent = "Data must be filled"
         return
