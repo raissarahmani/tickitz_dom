@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="signin.css">
+    <link rel="stylesheet" href="../styles/signin.css">
+    <script src="../script/signin.js" defer></script>
     <title>Tickitz - SignIn</title>
 </head>
 <body>
@@ -23,14 +24,17 @@
             </div>
             <form>
                 <label for="email">Email</label> <br>
-                <input type="email" name="email" placeholder="Enter your email"> <br><br>
+                <input type="email" name="email" placeholder="Enter your email"> <br>
+                <p>Email valid</p>
                 <label for="password">Password</label> <br>
                 <div>
                     <input type="password" name="password" placeholder="Enter your password"> <br><br>
                     <img src="../img/eye.svg" alt="Show Password">
                 </div>
+                <p>Pass valid</p>
                 <p><a href="">Forgot your password?</a></p>
-                <button> Login </button>
+                <button type="submit"> Login </button>
+                <p>Login success</p>
             </form>
             <div class="or">
                 <div></div>
