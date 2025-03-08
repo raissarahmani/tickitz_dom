@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="../styles/detail.css">
+    <script src="../script/detail.js" defer></script>
     <title>Tickitz - Details</title>
 </head>
 <body>
@@ -70,31 +71,44 @@
                     <label for="date">Choose Date</label>
                     <div>
                         <img src="../img/calendar.png" alt="Date">
-                        <select name="date">
-                            <option value="">21/07/20</option>
-                        </select>
+                        <input type="date">
                     </div>
+                    <p>Choose date</p>
                 </div>
                 <div>
                     <label for="time">Choose Time</label>
                     <div>
                         <img src="../img/time.png" alt="Time">
-                        <select name="time">
-                            <option value="">08 : 30 AM</option>
-                        </select>
+                        <input type="time">
                     </div>
+                    <p>Choose time</p>
                 </div>
                 <div>
                     <label for="loc">Choose Location</label>
                     <div>
                         <img src="../img/location.png" alt="Location">
                         <select name="loc">
-                            <option value="">Purwokerto</option>
+                            <option value="" hidden>--Choose City--</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Semarang">Semarang</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Medan">Medan</option>
+                            <option value="Palembang">Palembang</option>
+                            <option value="Samarinda">Samarinda</option>
+                            <option value="Banjarmasin">Banjarmasin</option>
+                            <option value="Manado">Manado</option>
+                            <option value="Makassar">Makassar</option>
+                            <option value="Denpasar">Denpasar</option>
                         </select>
                     </div>
+                    <p>Choose location</p>
                 </div>
                 <div>
-                    <button>Filter</button>
+                    <div>
+                        <button>Filter</button>
+                        <p>Filtered</p>
+                    </div>
                 </div>
             </div>
             <div class="cinema">
@@ -102,20 +116,33 @@
                     <p>Choose Cinema</p>
                     <p>39 Result</p>
                 </div>
-                <div>
+                <p>Choose cinema</p>
+                <form>
                     <div>
-                        <img src="../img/ebv.svg" alt="ebv">
+                        <input type="radio" name="cinema" id="ebv" value="ebv">
+                        <label for="ebv">
+                            <img src="../img/ebv.svg" alt="ebv">
+                        </label>
                     </div>
                     <div>
-                        <img src="../img/hiflix.png" alt="hiflix">
+                        <input type="radio" name="cinema" id="hiflix" value="hiflix">
+                        <label for="hiflix">
+                            <img src="../img/hiflix.png" alt="hiflix">
+                        </label>
                     </div>
                     <div>
-                        <img src="../img/cineone.svg" alt="cineone21">
+                        <input type="radio" name="cinema" id="cineone" value="cineone21">
+                        <label for="cineone">
+                            <img src="../img/cineone.svg" alt="cineone21">
+                        </label>
                     </div>
                     <div>
-                        <img src="../img/ebv.svg" alt="ebv">
+                        <input type="radio" name="cinema" id="ebv2" value="ebv">
+                        <label for="ebv2">
+                            <img src="../img/ebv.svg" alt="ebv">
+                        </label>
                     </div>
-                </div>
+                </form>
                 <div class="pages">
                     <div>1</div>
                     <div>2</div>
