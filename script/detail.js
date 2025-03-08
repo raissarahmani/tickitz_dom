@@ -67,4 +67,6 @@ btnBook.addEventListener("click", (e) => {
     } else {
         cinemaMsg.style.visibility = "hidden"
     }
+
+    location.href = "order.html"
 })
