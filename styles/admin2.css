@@ -92,40 +92,34 @@ main {
 }
 
 .list>:first-child {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 30vw 25vw 25vw;
+    grid-template-areas:
+    'a b c';
 }
 
 .list>:first-child p {
+    grid-area: a;
     font: 700 24px 'Mulish';
     color: #14142B;
 }
 
-.list>:first-child>form>div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.list>:first-child>form>div>div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+.list>:first-child>div {
+    grid-area: b;
     background-color: #EFF0F6;
     border: 1px solid #EFF0F6;
     border-radius: 8px;
-    padding: 0 1vw;
+    padding: 2vh 1vw;
+    margin-left: 9vw;
+    width: 60%;
 }
 
-.list>:first-child>form>div>div img {
+.list>:first-child>div img {
     width: 1vw;
     height: 2vh;
 }
 
-.list>:first-child>form>div>div>input {
+.list>:first-child>div input {
     background: #EFF0F6;
     border: none;
     color: #4E4B68;
@@ -139,14 +133,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     pointer-events: auto;
 }
 
-.list>:first-child>form button {
+.list>:first-child>button {
+    grid-area: c;
     background: #1D4ED8;
     border: 1px solid #1D4ED8;
     border-radius: 8px;
-    margin-left: 0.5vw;
     padding: 2vh 1vw;
     color: #fff;
     cursor: pointer;
+    width: 50%;
 }
 
 .list table {
@@ -276,7 +271,50 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: block;
     }
 
-    .list table {
-        overflow: scroll;
+    .list>:first-child {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        'a c'
+        'b b';
+    }
+
+    .list>:first-child p {
+        grid-area: a;
+    }
+
+    .list>:first-child>div {
+        grid-area: b;
+        width: 100%;
+        margin: 1vh 0;
+    }
+
+    .list>:first-child>div img {
+        width: 3vw;
+        height: 3vh;
+    }
+
+    .list>:first-child>button {
+        grid-area: c;
+        width: 60%;
+        margin: 0 0 2vh 13vw;
+    }
+
+    .list div:nth-of-type(2) {
+        overflow-x: scroll;
+    }
+
+    .list table td {
+        padding: 0 5vw;
+    }
+
+    .list table td:nth-of-type(3),
+    .list table td:nth-of-type(6) {
+        min-width: 200px;
+    }
+
+    .list table td:nth-of-type(7) {
+        min-width: 100px;
     }
 }
