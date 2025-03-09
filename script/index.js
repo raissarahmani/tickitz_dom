@@ -70,7 +70,7 @@ mobileMenu.addEventListener("click", () => {
     hamburgerMenu.classList.toggle("active")
 })
 
-const home = document.querySelector("nav>p:first-of-type")
+const home = document.querySelector(".hamburger-menu>nav>p:first-of-type")
 home.addEventListener("click", () => {
     location.href = "index.html"
 }, false)
