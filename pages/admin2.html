@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="admin2.css">
+    <link rel="stylesheet" href="../styles/admin2.css">
+    <script src="../script/admin2.js" defer></script>
     <title>Tickitz - List Movie</title>
 </head>
 <body>
@@ -36,13 +37,11 @@
             <div>
                 <p>List Movie</p>
                 <form>
-                    <label for="date" hidden></label>
                     <div>
+                        <label for="date" hidden></label>
                         <div>
                             <img src="../img/calendar.png" alt="Date">
-                            <select name="date">
-                                <option value="">November 2023</option>
-                            </select>
+                            <input type="date">
                         </div>
                         <button>Add Movie</button>
                     </div>

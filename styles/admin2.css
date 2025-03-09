@@ -1,0 +1,282 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5vh 10vw;
+    border-bottom: 1px solid #DEDEDE;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    width: 15%;
+}
+
+.logo img {
+    object-fit: contain;
+    width: 70%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font: 400 14px 'Mulish';
+    color: #0F172A;
+    width: 60%;
+}
+
+nav p:hover {
+    color: #1D4ED8;
+    cursor: pointer;
+}
+
+.account {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.account :first-child {
+    font: 400 14px 'Mulish';
+    color: #0F172A;
+}
+
+.account :nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1vw;
+}
+
+.account :nth-child(2) img {
+    object-fit: contain;
+    width: 2vw;
+    height: 3vh;
+}
+
+.account :last-child {
+    border-radius: 50%;
+    height: 7vh;
+    width: 7vh;
+}
+
+.account :last-child img {
+    object-fit: cover;
+}
+
+header>:last-child {
+    display: none;
+}
+
+main {
+    background: rgba(160, 163, 189, 0.2);
+    padding: 5vh 10vw 10vh 10vw;
+}
+
+.list {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 7vh 5vw;
+}
+
+.list>:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list>:first-child p {
+    font: 700 24px 'Mulish';
+    color: #14142B;
+}
+
+.list>:first-child>form>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.list>:first-child>form>div>div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EFF0F6;
+    border: 1px solid #EFF0F6;
+    border-radius: 8px;
+    padding: 0 1vw;
+}
+
+.list>:first-child>form>div>div img {
+    width: 1vw;
+    height: 2vh;
+}
+
+.list>:first-child>form>div>div>input {
+    background: #EFF0F6;
+    border: none;
+    color: #4E4B68;
+    margin: 0 1vw;
+    outline: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    width: 15px;
+    pointer-events: auto;
+}
+
+.list>:first-child>form button {
+    background: #1D4ED8;
+    border: 1px solid #1D4ED8;
+    border-radius: 8px;
+    margin-left: 0.5vw;
+    padding: 2vh 1vw;
+    color: #fff;
+    cursor: pointer;
+}
+
+.list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 5vh 0;
+}
+
+.list table tr {
+    border-bottom: 1px solid #E6EAF0;
+    text-align: center;
+}
+
+.list table th {
+    font: 700 12px 'Mulish';
+    color: #1F4173;
+    padding: 2vh 0;
+}
+
+.list table td {
+    font: 400 14px 'Lato';
+    color: #1F4173;
+}
+
+.list table td:nth-child(2) div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 10vh;
+    overflow: hidden;
+    padding: 1vh 0 1vh 1vw;
+}
+
+.list table td:nth-child(2) img {
+    object-fit: cover;
+    object-position: center top;
+    width:100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.list table td:nth-child(3) {
+    color: #1D4ED8;
+}
+
+.list table td:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3vh 0;
+}
+
+.list table td:last-child>:first-child {
+    background-color: #1D4ED8;
+    border-radius: 6px;
+    object-fit: contain;
+    width: 5vh;
+    height: 5vh;
+    padding: 1vh;
+    cursor: pointer;
+}
+
+.list table td:last-child>:nth-child(2) {
+    background: #5D5FEF;
+    border-radius: 6px;
+    object-fit: contain;
+    width: 5vh;
+    height: 5vh;
+    padding: 1.5vh;
+    cursor: pointer;
+}
+
+.list table td:last-child>:nth-child(3) {
+    background: #E82C2C;
+    border-radius: 6px;
+    object-fit: contain;
+    width: 5vh;
+    height: 5vh;
+    padding: 1vh;
+    cursor: pointer;
+}
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.pages div {
+    border: 0.5px solid #DEDEDE;
+    border-radius: 8px;
+    font: 400 18px 'Mulish';
+    color: #4E4B66;
+    margin: 0 0.5vw;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.pages div:hover {
+    background-color: #1D4ED8;
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(29,78,216,0.3);
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .account {
+        visibility: hidden;
+    }
+
+    header>:last-child {
+        display: block;
+    }
+
+    .list table {
+        overflow: scroll;
+    }
+}
