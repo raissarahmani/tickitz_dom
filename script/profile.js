@@ -181,3 +181,29 @@ showConfirmPass.addEventListener ("click", () => {
         confirmPass.type = "password"
     }
 })
+
+const hamburgerMenu = document.querySelector(".hamburger-menu")
+const mobileMenu = document.querySelector("header>:last-child>img")
+mobileMenu.addEventListener("click", () => {
+    hamburgerMenu.classList.toggle("active")
+})
+
+const home = document.querySelector(".hamburger-menu>nav>p:first-of-type")
+home.addEventListener("click", () => {
+    location.href = "../index.html"
+}, false)
+
+const movie = document.querySelector(".hamburger-menu>nav>p:nth-of-type(2)")
+movie.addEventListener("click", () => {
+    location.href = "home2.html"
+}, false)
+
+const buyTicket = document.querySelector(".hamburger-menu>nav>p:nth-of-type(3)")
+buyTicket.addEventListener("click", () => {
+    location.href = "detail.html"
+}, false)
+
+const profile = document.querySelector(".hamburger-menu>nav>p:nth-of-type(4)")
+profile.addEventListener("click", () => {
+    location.href = "profile.html"
+}, false)
