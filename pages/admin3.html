@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="admin3.css">
+    <link rel="stylesheet" href="../styles/admin3.css">
+    <script src="../script/admin3.js" defer></script>
     <title>Tickitz - Add Movie</title>
 </head>
 <body>
@@ -35,15 +36,19 @@
             <p>Add New Movie</p>
             <form>
                 <label for="upload">Upload Image</label> <br>
-                <input type="file" name="upload">Upload</button> <br><br>
+                <input type="file" name="upload"><br>
+                <p>Data should be filled</p>
                 <label for="name">Movie Name</label> <br>
-                <input type="text" name="name" placeholder="Spider-Man: Homecoming"> <br><br>
+                <input type="text" name="name" placeholder="Spider-Man: Homecoming"> <br>
+                <p>Data should be filled</p>
                 <label for="category">Category</label> <br>
-                <input type="text" name="category" placeholder="Action, Adventure, Sci-fi"> <br><br>
+                <input type="text" name="category" placeholder="Action, Adventure, Sci-fi"> <br>
+                <p>Data should be filled</p>
                 <div>
                     <div>
-                        <label for="date">Release Date</label> <br>
-                        <input type="text" name="date" placeholder="07/05/2020">
+                        <label for="releaseDate">Release Date</label> <br>
+                        <input type="date" name="releaseDate">
+                        <p>Data should be filled</p>
                     </div>
                     <div>
                         <label for="duration">Duration</label> <br>
@@ -51,25 +56,45 @@
                             <input type="number" name="duration" placeholder="2">
                             <input type="number" name="duration" placeholder="13">
                         </div>
+                        <p>Data should be filled</p>
                     </div>
                 </div>
                 <label for="director">Director Name</label> <br>
-                <input type="text" name="director" placeholder="Jon Watts"> <br><br>
+                <input type="text" name="director" placeholder="Jon Watts"> <br>
+                <p>Data should be filled</p>
                 <label for="cast">Casts</label> <br>
-                <input type="text" name="cast" placeholder="Tom Holland, Michael Keaton, Robert Downey Jr."> <br><br>
+                <input type="text" name="cast" placeholder="Tom Holland, Michael Keaton, Robert Downey Jr."> <br>
+                <p>Data should be filled</p>
                 <label for="synopsis">Synopsis</label><br>
                 <textarea name="synopsis"></textarea>
+                <p>Data should be filled</p>
                 <label for="loc">Add Location</label> <br>
-                <input type="text" name="loc" placeholder="Purwokerto, Bandung, Bekasi"> <br><br>
+                <select name="loc">
+                    <option value="" hidden>--Choose City--</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Bandung">Bandung</option>
+                    <option value="Semarang">Semarang</option>
+                    <option value="Surabaya">Surabaya</option>
+                    <option value="Medan">Medan</option>
+                    <option value="Palembang">Palembang</option>
+                    <option value="Samarinda">Samarinda</option>
+                    <option value="Banjarmasin">Banjarmasin</option>
+                    <option value="Manado">Manado</option>
+                    <option value="Makassar">Makassar</option>
+                    <option value="Denpasar">Denpasar</option>
+                </select>
+                <p>Data should be filled</p>
                 <label for="date">Set Date & Time</label> <br>
                 <input type="date" name="date"> <br>
+                <p>Data should be filled</p>
                 <div class="date">
                     <div id="set">+</div>
                     <p>08.30am</p>
                     <p>10.30pm</p>
                 </div>
             </form>
-            <button>Save Movie</button>
+            <p>New movie added!</p>
+            <button type="submit">Save Movie</button>
         </section>
     </main>
 </body>
