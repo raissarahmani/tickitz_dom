@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+    <script src="../script/profile.js" defer></script>
     <title>Tickitz - Profile</title>
 </head>
 <body>
@@ -72,24 +73,29 @@
                 <form>
                     <div>
                         <label for="firstname">First Name</label> 
-                        <input type="text" name="firstname" value="Jonas"> 
+                        <input type="text" name="firstname" placeholder="Jonas"> 
+                        <p>Data should be filled</p>
                     </div>
                     <div>
                         <label for="lastname">Last Name</label> 
-                        <input type="text" name="lastname" value="El Rodriguez"> 
+                        <input type="text" name="lastname" placeholder="El Rodriguez"> 
+                        <p>Data should be filled</p>
                     </div>
                     <div>
                         <label for="email">Email</label> 
-                        <input type="email" name="email" value="jonasrodrigu123@gmail.com"> 
+                        <input type="email" name="email" placeholder="jonasrodrigu123@gmail.com"> 
+                        <p>Data should be filled</p>
                     </div>
                     <div>
                         <label for="phone">Phone Number</label> 
                         <div>
                             <p>+62</p>
-                            <input type="text" name="phone" value="81445687121">
+                            <input type="text" name="phone">
                         </div>
+                        <p>Data should be filled</p>
                     </div>
                 </form>
+                <p>Profile updated!</p>
             </section>
             <section class="privacy">
                 <p>Account and Privacy</p>
@@ -100,6 +106,7 @@
                             <input type="password" name="newpass">
                             <img src="../img/eye.svg" alt="See Password">
                         </div>
+                        <p>Password not valid</p>
                     </div>
                     <div>
                         <label for="confirm">Confirm Password</label> 
@@ -107,8 +114,10 @@
                             <input type="password" name="confirm">
                             <img src="../img/eye.svg" alt="See Password">
                         </div>
+                        <p>Password did not match</p>
                     </div>
                 </form>
+                <p>Password changed!</p>
             </section>
             <button>Update changes</button>
         </div>
