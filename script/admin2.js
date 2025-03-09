@@ -8,7 +8,7 @@ toMovie.addEventListener("click", () => {
     location.href = "admin2.html"
 })
 
-const addMovie = document.querySelector("form div button")
+const addMovie = document.querySelector(".list div button")
 addMovie.addEventListener("click", (e) => {
     e.preventDefault()
     location.href = "admin3.html"
