@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+    <script src="../script/admin.js" defer></script>
     <title>Tickitz - Sales Chart</title>
 </head>
 <body>
@@ -32,19 +33,37 @@
         <img src="../img/menu.png" alt="Menu">
     </header>
     <main>
-        <section class="sales">
+        <section class="sales-chart">
             <div>
                 <p>Sales Chart</p>
                 <form>
-                    <label for="movies" hidden></label>
-                    <select name="movies">
-                        <option value="">Movies Name</option>
-                    </select>
-                    <label for="duration"></label>
-                    <select name="duration">
-                        <option value="">Weekly</option>
-                    </select>
-                    <button>Filter</button>
+                    <div>
+                        <label for="movies" hidden></label>
+                        <select name="movies">
+                            <option value="" hidden>Movies Name</option>
+                            <option value="Spiderman: Homecoming">Spiderman: Homecoming</option>
+                            <option value="Tennet">Tennet</option>
+                            <option value="The Witches">The Witches</option>
+                            <option value="Black Widow">Black Widow</option>
+                            <option value="The Lion King">The Lion King</option>
+                            <option value="John Wick 3">John Wick 3</option>
+                            <option value="Roblox">Roblox</option>
+                        </select>
+                        <p>Choose movie</p>
+                    </div>
+                    <div>
+                        <label for="periode"></label>
+                        <select name="periode">
+                            <option value="" hidden>Periode</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                        <p>Choose periode</p>
+                    </div>
+                    <div>
+                        <button>Filter</button>
+                    </div>
                 </form>
             </div>
             <div class="graph">
@@ -91,19 +110,42 @@
                 <img src="../img/graph.png" alt="Sales Graph">
             </div>
         </section>
-        <section class="sales">
+        <section class="ticket-sales">
             <div>
                 <p>Ticket Sales</p>
                 <form>
-                    <label for="movies" hidden></label>
-                    <select name="movies">
-                        <option value="">Category</option>
-                    </select>
-                    <label for="duration"></label>
-                    <select name="duration">
-                        <option value="">Location</option>
-                    </select>
-                    <button>Filter</button>
+                    <div>
+                        <label for="category" hidden></label>
+                        <select name="category">
+                            <option value="" hidden>Category</option>
+                            <option value="Adventure">Adventure</option>
+                            <option value="Action">Action</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Sci-fi">Sci-Fi</option>
+                        </select>
+                        <p>Choose category</p>
+                    </div>
+                    <div>
+                        <label for="location"></label>
+                        <select name="location">
+                            <option value="" hidden>Location</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Semarang">Semarang</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Medan">Medan</option>
+                            <option value="Palembang">Palembang</option>
+                            <option value="Samarinda">Samarinda</option>
+                            <option value="Banjarmasin">Banjarmasin</option>
+                            <option value="Manado">Manado</option>
+                            <option value="Makassar">Makassar</option>
+                            <option value="Denpasar">Denpasar</option>
+                        </select>
+                        <p>Choose location</p>
+                    </div>
+                    <div>
+                        <button>Filter</button>
+                    </div>
                 </form>
             </div>
             <div class="graph">

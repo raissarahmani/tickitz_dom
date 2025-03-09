@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5vh 10vw;
+    border-bottom: 1px solid #DEDEDE;
+    background-color: #fff;
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
+
+.logo {
+    width: 15%;
+}
+
+.logo img {
+    object-fit: contain;
+    width: 70%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font: 400 14px 'Mulish';
+    color: #0F172A;
+    width: 60%;
+}
+
+nav p:hover {
+    color: #1D4ED8;
+    cursor: pointer;
+}
+
+.account {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.account :first-child {
+    font: 400 14px 'Mulish';
+    color: #0F172A;
+}
+
+.account :nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1vw;
+}
+
+.account :nth-child(2) img {
+    object-fit: contain;
+    width: 2vw;
+    height: 3vh;
+}
+
+.account :last-child {
+    border-radius: 50%;
+    height: 7vh;
+    width: 7vh;
+}
+
+.account :last-child img {
+    object-fit: cover;
+}
+
+header>:last-child {
+    display: none;
+}
+
+main {
+    background: rgba(160, 163, 189, 0.2);
+    padding: 5vh 10vw 10vh 10vw;
+}
+
+.sales-chart, .ticket-sales {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 7vh 5vw;
+    margin: 7vh 0;
+}
+
+.sales-chart>:first-child>p, 
+.ticket-sales>:first-child>p {
+    font: 700 24px 'Mulish';
+    color: #14142B;
+    margin-bottom: 3vh;
+}
+
+.sales-chart>:first-child>form,
+.ticket-sales>:first-child>form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sales-chart>:first-child>form>div,
+.ticket-sales>:first-child>form>div {
+    width: 32%;
+}
+
+.sales-chart>:first-child>form select,
+.ticket-sales>:first-child>form select {
+    background: #EFF0F6;
+    border: 1px solid #EFF0F6;
+    border-radius: 8px;
+    padding: 2vh 1vw;
+    color: #4E4B68;
+    font: 600 16px 'Mulish';
+    width: 100%;
+}
+
+.sales-chart>:first-child>form option,
+.ticket-sales>:first-child>form option {
+    color:#4E4B68;
+}
+
+.sales-chart>:first-child>form>div>p,
+.ticket-sales>:first-child>form>div>p {
+    visibility: hidden;
+    font: 200 12px 'Mulish';
+    color: red;
+}
+
+.sales-chart>:first-child>form button,
+.ticket-sales>:first-child>form button {
+    background: #1D4ED8;
+    border: 1px solid #1D4ED8;
+    border-radius: 8px;
+    margin: 0 0 3vh 0.5vw;
+    padding: 2.5vh 1vw;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+}
+
+.graph {
+    position: relative;
+}
+
+.graph p {
+    font: 600 15px 'Mulish';
+    color: #151522;
+    margin: 5vh 0 4vh 0;
+}
+
+.chart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 52vh;
+    margin: 5vh 0 10vh 0;
+    position: relative;
+}
+
+.leftlabels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 10%;
+}
+
+.stroke {
+    position: relative;
+}
+
+.stroke p {
+    font: 400 11px 'Mulish';
+    color: #999999;
+    text-align: right;
+}
+
+.bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    height: 100%;
+    width: 90%;
+    padding: 0 0 0 6vw;
+}
+
+.bar1, .bar2, .bar3,
+.bar4, .bar5, .bar6 {
+    width: 25%;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    height: 1%;
+    margin: 0 0.5vw;
+}
+
+.bottomlabel {
+    position: absolute;
+    bottom: -8vh;
+    width: 100%;
+    text-align: center;
+    font: 400 11px 'Mulish';
+    color: #999999;
+}
+
+.graph img {
+    position: absolute;
+    bottom: 0;
+    left:12%;
+    width: 80%;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        border-bottom: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    nav, .account {
+        visibility: hidden;
+    }
+
+    header>:last-child {
+        display: block;
+    }
+
+    .sales-chart>:first-child>form,
+    .ticket-sales>:first-child>form  {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sales-chart>:first-child>form>div,
+    .ticket-sales>:first-child>form>div {
+        width: 100%;
+    } 
+
+    .sales-chart>:first-child>form select,
+    .sales-chart>:first-child>form button,
+    .ticket-sales>:first-child>form select,
+    .ticket-sales>:first-child>form button  {
+        width: 100%;
+        margin-top: 2vh;
+    }
+
+}
