@@ -432,12 +432,6 @@ main>:nth-child(2) button {
         background-color: #fff;
     }
 
-    .detail, .privacy, main>:nth-child(2) button {
-        display: none;
-        width: 80%;
-        margin: 7vh 0 0 10vw;
-    }
-
     main>:nth-child(2){
         order: -1;
         width: 100%;
@@ -452,5 +446,45 @@ main>:nth-child(2) button {
 
     .option p {
         margin-right: 0;
+    }
+
+    .detail {
+        display: none;
+        width: 80%;
+        margin: 7vh 0 0 10vw;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .detail form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        padding: 0 1vw;
+        margin-top: 7vh;
+    }
+
+    .privacy {
+        display: none;
+        width: 80%;
+        margin-left: 10vw;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .privacy form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .detail input,
+    .detail form>:last-child>div,
+    .privacy form>div>div {
+        width: 100%;
+    }
+
+    main>:nth-child(2) button {
+        display: none;
+        width: 80%;
+        margin: 7vh 0 0 10vw;
     }
 }
