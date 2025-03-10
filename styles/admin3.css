@@ -189,12 +189,6 @@ form .date p {
     cursor: pointer;
 }
 
-.add-movie>p:last-of-type {
-    visibility: hidden;
-    font: 600 12px 'Mulish';
-    color: green;
-}
-
 @media screen and (max-width: 767px) {
     header {
         border-bottom: none;

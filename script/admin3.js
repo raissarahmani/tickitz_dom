@@ -117,7 +117,7 @@ btnSave.addEventListener("click", (e) => {
         dateMsg.style.visibility = "hidden"
     }
 
-    success.style.visibility = "visible"
+    alert("New movie added!")
 
 })
 
