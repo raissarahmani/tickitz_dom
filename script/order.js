@@ -23,6 +23,11 @@ toSignUp.addEventListener("click", () => {
     location.href = "signup.html"
 }, false)
 
+const checkout = document.querySelector(".content>:last-child>button")
+checkout.addEventListener("click", () => {
+    location.href = "payment.html"
+})
+
 const hamburgerMenu = document.querySelector(".hamburger-menu")
 const mobileMenu = document.querySelector("header div:last-child img")
 mobileMenu.addEventListener("click", () => {
