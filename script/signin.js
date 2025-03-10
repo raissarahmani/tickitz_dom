@@ -60,7 +60,7 @@ btnLogin.addEventListener("click", (e) => {
         return
     }
 
-    btnMsg.style.visibility = "visible"
+    alert("Login success")
     location.href = "../index.html"
 })
 
