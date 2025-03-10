@@ -14,6 +14,18 @@ addMovie.addEventListener("click", (e) => {
     location.href = "admin3.html"
 })
 
+const table = document.querySelector(".list table")
+const tableList = document.querySelectorAll(".list table tr")
+tableList.forEach((list) => {
+    const btnDelete = list.querySelector("td:last-child img:last-of-type")
+    if (btnDelete) {
+        btnDelete.addEventListener("click", (e) => {
+            e.preventDefault()
+            list.remove()
+        })
+    }
+})
+
 const hamburgerMenu = document.querySelector(".hamburger-menu")
 const mobileMenu = document.querySelector("header>:last-child>img")
 mobileMenu.addEventListener("click", () => {
