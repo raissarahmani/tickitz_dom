@@ -330,12 +330,6 @@ main>:nth-child(2) {
     margin-bottom: 1vh;
 }
 
-.detail>p:last-of-type, .privacy>p:last-of-type {
-    visibility: hidden;
-    font: 500 12px 'Mulish';
-    color: green;
-}
-
 .privacy {
     background-color: #fff;
     border-radius: 16px;

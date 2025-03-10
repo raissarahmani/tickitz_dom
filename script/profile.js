@@ -145,7 +145,6 @@ btnUpdt.addEventListener("click", (e) => {
     if (!numPass) {
         newPassMsg.style.visibility = "visible"
         newPassMsg.textContent = "Password should be a combination of letter and number"
-        return
     }
 
     if (newPass.value !== confirmPass.value) {
@@ -156,11 +155,7 @@ btnUpdt.addEventListener("click", (e) => {
     newPassMsg.style.visibility = "hidden"
     confirmMsg.style.visibility = "hidden"
 
-    const updateProfile = document.querySelector(".detail>p:last-of-type")
-    updateProfile.style.visibility = "visible"
-    
-    const updatePass = document.querySelector(".privacy>p:last-of-type ")
-    updatePass.style.visibility = "visible"
+    alert("Update success")
 
 })
 
