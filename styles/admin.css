@@ -25,7 +25,7 @@ header {
     width: 70%;
 }
 
-nav {
+.wide-view {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -34,7 +34,7 @@ nav {
     width: 60%;
 }
 
-nav p:hover {
+.wide-view p:hover {
     color: #1D4ED8;
     cursor: pointer;
 }
@@ -236,11 +236,54 @@ main {
         width: 100%;
     }
 
-    nav, .account {
+    .wide-view, .account {
         visibility: hidden;
     }
 
     header>:last-child {
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .hamburger-menu {
+        display: none;
+        position: absolute;
+        top: 5vh;
+        right: 0;
+        background-color: #fff;
+        padding: 2vh 5vw;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        border-radius: 8px;
+        width: 30vw;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    
+    .hamburger-menu p {
+        font: 400 14px 'Mulish';
+        color: #0F172A;
+        margin: 5vh 2vw;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .hamburger-menu p::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1vh;
+        width: 0;
+        height: 2px;
+        background-color: #1D4ED8;
+        transition: width 0.3s ease-in-out;
+    }
+
+    .hamburger-menu p:hover::after {
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .hamburger-menu.active {
         display: block;
     }
 
