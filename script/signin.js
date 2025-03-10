@@ -55,6 +55,11 @@ btnLogin.addEventListener("click", (e) => {
         return
     }
 
+    if (email.value === "test@admin.com" && pass.value === "1234test") {
+        location.href = "admin.html"
+        return
+    }
+
     btnMsg.style.visibility = "visible"
     location.href = "../index.html"
 })
