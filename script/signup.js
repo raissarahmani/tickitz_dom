@@ -2,7 +2,6 @@ const email = document.querySelector("input[name='email']")
 const pass = document.querySelector("input[name='password']")
 const tnc = document.getElementById("tnc")
 const btnRegister = document.querySelector("form button")
-const btnMsg = document.querySelector("form p:last-of-type")
 
 btnRegister.addEventListener("click", (e) => {
     e.preventDefault()
@@ -28,7 +27,6 @@ btnRegister.addEventListener("click", (e) => {
     if (!email.value.includes("@")) {
         emailMsg.style.visibility = "visible"
         emailMsg.textContent = "Email not valid"
-        return
     }
 
     if (pass.value.length < 8) {
@@ -57,12 +55,12 @@ btnRegister.addEventListener("click", (e) => {
     }
 
     const tncMsg = document.querySelector("form p:nth-of-type(3)")
-    if (!tnc.checked) {
+    if (!tnc.checked && innerWidth > 767) {
         tncMsg.style.visibility = "visible"
         return
     }
 
-    btnMsg.style.visibility = "visible"
+    alert("Register success. Please sign in")
     location.href = "signin.html"
 })
 

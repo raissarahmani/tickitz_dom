@@ -237,8 +237,8 @@ form p:last-of-type {
         background-position: center top;
     }
     
-    .steps, #tnc, form>label:last-of-type, .socmed div p,
-    .signup form :nth-last-child(2) {
+    .steps, #tnc, form>label:last-of-type, 
+    .socmed div p {
         display: none;
     }
 
