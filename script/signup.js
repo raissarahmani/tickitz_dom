@@ -60,6 +60,9 @@ btnRegister.addEventListener("click", (e) => {
         return
     }
 
+    const emailValue = email.value
+    const passValue = pass.value
+    localStorage.setItem("user", JSON.stringify({emailValue, passValue}))
     alert("Register success. Please sign in")
     location.href = "signin.html"
 })

@@ -60,8 +60,16 @@ btnLogin.addEventListener("click", (e) => {
         return
     }
 
-    alert("Login success")
-    location.href = "../index.html"
+    const registeredUser = JSON.parse(localStorage.getItem("user"))
+    if (email.value === registeredUser.emailValue && pass.value === registeredUser.passValue) {
+        alert("Login success")
+        location.href = "../index.html"
+    } else if (email.value === registeredUser.emailValue) {
+        alert("Incorrect email and password")
+    } else {
+        alert("User not registered. Please sign up")
+    }
+
 })
 
 const showPass = document.querySelector("form div img")
