@@ -112,7 +112,8 @@ btnPay.addEventListener("click", (e) => {
 
     const btnPayLater = document.querySelector(".popup>:last-child>:last-child")
     btnPayLater.addEventListener("click", () => {
-        location.href = "payment.html"
+        popupContainer.style.visibility = "hidden"
+        popupPayment.style.visibility = "hidden"
     })
 })
 
