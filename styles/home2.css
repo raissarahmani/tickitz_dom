@@ -252,16 +252,21 @@ header>:last-child {
 }
 
 .movie-title {
-    font: 700 24px 'Mulish';
+    font: 700 18px 'Mulish';
     color: #14142B;
     text-align: left;
     margin: 2vh 0;
+    display: block;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .genre {
     display: flex;
     flex-direction: row;
-    font: 400 16px 'Mulish';
+    font: 400 12px 'Mulish';
 }
 
 .genre>p {
@@ -270,7 +275,7 @@ header>:last-child {
     border-radius: 20px;
     margin-right: 1vw;
     padding: 1.5vh;
-    text-align: left;
+    text-align: center;
 }
 
 .pages {
