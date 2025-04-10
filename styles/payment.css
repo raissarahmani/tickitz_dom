@@ -1,4 +1,4 @@
-/* * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -67,9 +67,9 @@ header {
 
 header>:last-child {
     display: none;
-} */
+}
 
-/* main {
+main {
     background: rgba(160, 163, 189, 0.2);
     padding: 5vh 10vw 10vh 10vw;
     position: relative;
@@ -129,9 +129,9 @@ header>:last-child {
     margin: 0 2 vw;
     font: 600 14px 'Mulish';
     color: #A0A3BD;
-} */
+}
 
-/* .payment-page {
+.payment-page {
     background-color: #fff;
     margin: 0 7vw;
     padding: 10vh 4vw;
@@ -148,9 +148,9 @@ header>:last-child {
     margin: 5vh 0;
     font: 400 14px 'Mulish';
     color: #8692A6;
-} */
+}
 
-/* .info form input {
+.info form input {
     font: 400 16px 'Mulish';
     color: #000;
     margin: 1vh 0;
@@ -163,8 +163,8 @@ header>:last-child {
 .info form input:last-of-type {
     font: 700 16px 'Mulish';
     color: #1D4ED8;
-} */
-/* 
+}
+
 .personal-info input {
     font: 400 18px 'Mulish';
     color: #4E4B66;
@@ -179,9 +179,9 @@ header>:last-child {
     font: 200 12px 'Mulish';
     color: red;
     margin-bottom: 2vh;
-} */
+}
 
-/* .personal-info form div {
+.personal-info form div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -202,8 +202,8 @@ header>:last-child {
     border: none;
     border-left: 1px solid #E6E6E6;
     outline: none;
-} */
-/* 
+}
+ 
 .method>form {
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -252,9 +252,9 @@ form input[type="radio"]:checked + label {
     font: 200 12px 'Mulish';
     color: red;
     margin-bottom: 5vh;
-} */
+}
 
-/* .method button {
+.method button {
     background-color: #1D4ED8;
     font: 700 16px 'Mulish';
     color: #F7F7FC;
@@ -271,9 +271,9 @@ form input[type="radio"]:checked + label {
     inset: 0;
     background-color: rgba(0,0,0,0.6);
     z-index: 1;
-} */
+}
 
-/* .popup {
+.popup {
     visibility: hidden;
     background-color: #fff;
     border-radius: 16px;
@@ -296,9 +296,9 @@ form input[type="radio"]:checked + label {
     align-items: center;
     justify-content: space-between;
     margin: 7vh 0;
-} */
+}
 
-/* .popup>div>:first-child {
+.popup>div>:first-child {
     font: 400 14px 'Mulish';
     color: #8692A6;
 }
@@ -320,9 +320,9 @@ form input[type="radio"]:checked + label {
     margin-left: 1vw;
     padding: 2vh 1vw;
     background-color: #fff;
-} */
+}
 
-/* .popup>:nth-child(3)>:nth-child(2) {
+.popup>:nth-child(3)>:nth-child(2) {
     font: 700 18px 'Mulish';
     color: #1D4ED8;
     text-align: right;
@@ -340,9 +340,9 @@ span {
 
 .popup>:last-child {
     flex-direction: column;
-} */
+}
 
-/* .popup>:last-child>:first-child {
+.popup>:last-child>:first-child {
     font: 700 16px 'Mulish';
     color: #F7F7FC;
     background-color: #1D4ED8;
@@ -363,7 +363,7 @@ span {
     padding: 2vh 1vw;
     width: 100%;
     cursor: pointer;
-} */
+}
 
 footer {
     padding: 10vh 10vw;
