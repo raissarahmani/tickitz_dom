@@ -684,14 +684,19 @@ footer {
 
     .cinema>:nth-child(2) {
         flex-direction: column;
+        gap: 3vh;
     }
 
     .cinema>:nth-child(2) div {
         width: 100%;
     }
 
-    .cinema button {
+    .cinema>:nth-child(4) {
         display: none;
+    }
+
+    .cinema button {
+        width: 100%;
     }
 
     .footer {

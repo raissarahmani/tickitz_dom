@@ -58,3 +58,8 @@ const signUp = document.querySelector(".hamburger-menu>nav>p:nth-of-type(5)")
 signUp.addEventListener("click", () => {
     location.href = "signup.html"
 }, false)
+
+const btnBook = document.querySelector(".seats>:nth-child(3)>button")
+btnBook.addEventListener("click", () => {
+    location.href = "payment.html"
+})

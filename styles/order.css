@@ -337,6 +337,19 @@ main {
     background-color: #4E4B66;
 }
 
+.seats>:nth-child(3) button {
+    background-color: #1D4ED8;
+    color: #F8FAFC;
+    font: 700 12px 'Mulish';
+    border: 1px solid #1D4ED8;
+    border-radius: 4px;
+    margin: 6vh 0;
+    padding: 2vh 2vw;
+    width: 100%;
+    cursor: pointer;
+    display: none;
+}
+
 .content>:nth-child(2) {
     width: 25%;
     margin-left: 1vw;
@@ -710,6 +723,10 @@ footer {
         font: 700 20px 'Mulish';
     }
 
+    .seats>:nth-child(2)>:nth-child(2) {
+        overflow-x: scroll;
+    }
+
     .seats>:nth-child(2)>:nth-child(2) p {
         display: none;
     }
@@ -729,6 +746,10 @@ footer {
     .legend {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seats>:nth-child(3) button {
+        display: block;
     }
 
     .content>:nth-child(2) {
