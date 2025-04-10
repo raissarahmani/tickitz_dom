@@ -23,6 +23,67 @@ toSignUp.addEventListener("click", () => {
     location.href = "./pages/signup.html"
 }, false)
 
+// fetch movie list
+const API_KEY = "ae266d92588cded8ace6fb5f85c35955"
+const nowPlayingUrl = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&page=1`
+const genreUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`
+
+const containerNow = document.querySelector(".movie-now")
+let genreList = {}
+
+async function getGenre () {
+    try {
+        const response = await fetch (genreUrl)
+        const dataGenre = await response.json()
+        genreList = dataGenre.genres.reduce((acc, genre) => {
+            acc[genre.id] = genre.name
+            return acc
+        }, {})
+        movieList()
+    } catch (error) {
+        console.error(error.message)
+    }
+}
+
+async function movieList () {
+    try {
+        const response = await fetch(nowPlayingUrl)
+        const dataMovie = await response.json()
+        displayNowPlaying(dataMovie.results.slice(0,4))
+    } 
+    catch (error) {
+        console.error (error.message)
+    }
+}
+
+function displayNowPlaying(movies) {
+    containerNow.innerHTML = ""
+    movies.forEach(movie => {
+        const movieContainer = document.createElement("div")
+        movieContainer.classList.add("container-now")
+
+        const genreNames = movie.genre_ids.map(id => genreList[id]).slice(0,2)
+
+        movieContainer.innerHTML = `
+            <div class="recomended">Recomended</div>
+            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+            <p class="movie-title">${movie.title}</p>
+            <div class="genre">
+                ${genreNames.map(name => `<p>${name}</p>`).join("")}
+            </div>
+            <div class="detail">
+                <div>Details</div>
+                <div>Buy Ticket</div>
+            </div>`
+        containerNow.appendChild(movieContainer)
+
+    })
+}
+
+getGenre()
+
+
+// to detail movie
 const detailMovie = document.querySelectorAll(".detail :first-child")
 detailMovie.forEach((detail) => {
     detail.addEventListener("click", () => {
@@ -35,6 +96,70 @@ viewAll.addEventListener("click", () => {
     location.href = "./pages/home2.html"
 }, false)
 
+
+// fetch upcoming movie
+const upcomingUrl = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`
+const genreUpUrl = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`
+
+const containerUp = document.querySelector(".movie-up")
+let upcomingGenreList = {}
+
+async function getUpGenre () {
+    try {
+        const response = await fetch (genreUpUrl)
+        const dataGenre = await response.json()
+        upcomingGenreList = dataGenre.genres.reduce((acc, genre) => {
+            acc[genre.id] = genre.name
+            return acc
+        }, {})
+        upMovieList()
+    } catch (error) {
+        console.error(error.message)
+    }
+}
+
+async function upMovieList () {
+    try {
+        const responseUp = await fetch(upcomingUrl)
+        const dataUpMovieUp = await responseUp.json()
+        displayNowPlaying(dataUpMovieUp.results.slice(0,4))
+    } 
+    catch (error) {
+        console.error (error.message)
+    }
+}
+
+function displayUpcoming(movies) {
+    containerUp.innerHTML = ""
+    movies.forEach(movie => {
+        const upMovieContainer = document.createElement("div")
+        upMovieContainer.classList.add("container-up")
+
+        const genreNames = movie.genre_ids.map(id => genreList[id]).slice(0,2)
+        const releaseDate = new Date(movie.release_date).toLocaleDateString("en-US", {
+            month: "short",
+            year: "numeric",
+        })
+
+        upMovieContainer.innerHTML = `
+            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
+            <p class="movie-title">${movie.title}</p>
+            <div class="genre">
+                ${genreNames.map(name => `<p>${name}</p>`).join("")}
+            </div>
+            <p class="release">${releaseDate}</p>
+            <div class="detail">
+                <div>Details</div>
+                <div>Buy Ticket</div>
+            </div>`
+        containerUp.appendChild(upMovieContainer)
+
+    })
+}
+
+getUpGenre()
+
+// newsletter
 const nameNl = document.querySelector("input[name='firstname']")
 const email = document.querySelector("input[name='email']")
 const btnNewsletter = document.querySelector(".newsletter form button")

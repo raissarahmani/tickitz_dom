@@ -15,6 +15,8 @@ addMovie.addEventListener("click", (e) => {
 })
 
 const table = document.querySelector(".list table")
+ 
+
 const tableList = document.querySelectorAll(".list table tr")
 tableList.forEach((list) => {
     const btnDelete = list.querySelector("td:last-child img:last-of-type")

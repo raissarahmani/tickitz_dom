@@ -129,14 +129,14 @@ main>div {
     margin: 2vh 0.5vw 2vh 0;
     padding: 1vh 1vw;
     background-color: rgba(160, 163, 189, 0.1);
-}
+} 
 
 .detail {
     width: 70vw;
     display: grid;
     grid-template-columns: 20vw 30vw;
     grid-template-rows: repeat(2,10vh);
-}
+} 
 
 .detail1 :first-child, .detail2 :first-child,
 .detail3 :first-child, .detail4 :first-child {

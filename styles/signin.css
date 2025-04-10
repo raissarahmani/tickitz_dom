@@ -36,7 +36,7 @@ main {
     height: 50%;
 }
 
-.signin {
+/* .signin {
     background-color: #fff;
     border-radius: 8px;
     padding: 5vh 3vw;
@@ -56,9 +56,9 @@ main {
     font: 400 18px 'Inter';
     color: #A0A3BD;
     margin: 5vh 1vw 1vh;
-}
+} */
 
-form {
+/* form {
     margin: 3vh 0 1vh 0;
     padding: 3vh 3vw 1vh 3vw;
     font: 600 16px 'Mulish';
@@ -78,9 +78,9 @@ form {
 ::placeholder {
     font: 400 16px 'Mulish';
     color: #A0A3BD;
-}
+} */
 
-form p:first-of-type, form p:nth-of-type(2) {
+/* form p:first-of-type, form p:nth-of-type(2) {
     visibility: hidden;
     font: 200 12px 'Mulish';
     color: red;
@@ -106,7 +106,7 @@ form input {
     border-radius: 4px;
     background-color: #FCFDFE;
     width: 100%;
-}
+} */
 
 form input:focus {
     outline: none;
@@ -136,7 +136,7 @@ form p:last-of-type {
     margin-bottom: 2vh;
 }
 
-.or {
+/* .or {
     display: flex;
     align-items: center;
     padding: 0 3vw;
@@ -151,9 +151,9 @@ form p:last-of-type {
     font: 400 12px 'Inter';
     color: #aaa;
     margin: 0 2vw;
-}
+} */
 
-.socmed {
+/* .socmed {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -176,7 +176,7 @@ form p:last-of-type {
 
 .socmed div img, .socmed div p {
     padding: 0 1vw;
-}
+} */
 
 @media screen and (max-width: 767px) {
     body {

@@ -297,7 +297,7 @@ main>:nth-child(2) {
     grid-area: b;
     margin-top: 3vh;
 }
-
+/* 
 #active {
     color: #00BA88;
     font: 700 14px 'Mulish';
@@ -316,9 +316,9 @@ main>:nth-child(2) {
     border: 1px solid rgba(232, 44, 44, 0.2);
     padding: 2vh 0;
     width: 15vw;
-}
+} */
 
-.history>:nth-child(2)>:first-child {
+/* .history>:nth-child(2)>:first-child {
     color: #6E7191;
     font: 700 14px 'Mulish';
     background: rgba(110, 113, 145, 0.2);
@@ -326,9 +326,9 @@ main>:nth-child(2) {
     border: 1px solid rgba(110, 113, 145, 0.2);
     padding: 2vh 0;
     width: 15vw;
-}
+} */
 
-.history>:nth-child(2)>:last-child {
+/* .history>:nth-child(2)>:last-child {
     color: #1D4ED8;
     font: 700 14px 'Mulish';
     background: rgba(29, 78, 216, 0.2);
@@ -336,9 +336,9 @@ main>:nth-child(2) {
     border: 1px solid rgba(29, 78, 216, 0.2);
     padding: 2vh 0;
     width: 15vw;
-}
+} */
 
-.history>:nth-child(3) {
+/* .history>:nth-child(3) {
     grid-area: c;
     margin: 3vh 0;
     display: flex;
@@ -355,7 +355,7 @@ main>:nth-child(2) {
 
 .history>:nth-child(3) img {
     cursor: pointer;
-}
+} */
 
 .history-now {
     grid-area: g;

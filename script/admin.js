@@ -10,8 +10,8 @@ toMovie.addEventListener("click", () => {
 
 const chooseMovie = document.querySelector("select[name='movies']")
 const periode = document.querySelector("select[name='periode']")
-const btnFilter = document.querySelector(".sales-chart>:first-child>form button")
-btnFilter.addEventListener("click", (e) => {
+const formSales = document.querySelector(".sales-chart>:first-child>form")
+formSales.addEventListener("submit", (e) => {
     e.preventDefault()
 
     const movieMsg = document.querySelector(".sales-chart>:first-child>form>div:first-of-type>p")
@@ -29,20 +29,17 @@ btnFilter.addEventListener("click", (e) => {
     }
 
     const title = document.querySelector(".sales-chart>.graph>p")
-    chooseMovie.addEventListener("change", () => {
-        title.textContent = chooseMovie.value
-        console.log(title)
-    })
+    title.textContent = chooseMovie.value
 })
 
 const category = document.querySelector("select[name='category']")
 const loc = document.querySelector("select[name='location']")
-const filter = document.querySelector(".ticket-sales>:first-child>form button")
-filter.addEventListener("click", (e) => {
+const formTicket = document.querySelector(".ticket-sales form")
+formTicket.addEventListener("submit", (e) => {
     e.preventDefault()
 
-    const categoryMsg = document.querySelector(".ticket-sales>:first-child>form>div:first-of-type>p")
-    const locMsg = document.querySelector(".ticket-sales>:first-child>form>div:nth-of-type(2)>p")
+    const categoryMsg = document.querySelector(".ticket-sales form div:first-of-type p")
+    const locMsg = document.querySelector(".ticket-sales form div:nth-of-type(2) p")
     if (!category.value) {
         categoryMsg.style.visibility = "visible"
     } else {
@@ -55,14 +52,10 @@ filter.addEventListener("click", (e) => {
         locMsg.style.visibility = "hidden"
     }
 
-    const text = document.querySelector(".ticket-sales>.graph>p")
+    const genreCity = document.querySelector(".ticket-sales>.graph>p")
+    // console.log(genreCity)
+    genreCity.textContent = category.value
     
-    function genreAndCity () {
-        text.textContent = `${category.value}, ${loc.value}`
-    }
-    
-    category.addEventListener("change", genreAndCity)
-    loc.addEventListener("change", genreAndCity)
 })
 
 const hamburgerMenu = document.querySelector(".hamburger-menu")

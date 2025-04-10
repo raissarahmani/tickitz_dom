@@ -13,7 +13,7 @@ header {
     background-color: #fff;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
 }
 
 .logo {
@@ -293,12 +293,17 @@ header>:last-child {
     color: #14142B;
     text-align: left;
     margin: 2vh 0;
+    display: block;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .genre {
     display: flex;
     flex-direction: row;
-    font: 400 16px 'Mulish';
+    font: 400 12px 'Mulish';
 }
 
 .genre>p {
